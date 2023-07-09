@@ -17,5 +17,5 @@ jobs:
           max-num-of-reviewers: 5
       - name: Show result
         if: always()
-        run: echo '${{ steps.assign.outputs.result }}' # success or failure
+        run: echo '${{ steps.assign.outputs.result }}' # success or failure 
 
