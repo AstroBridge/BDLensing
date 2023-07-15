@@ -16,6 +16,7 @@ jobs:
           max-num-of-reviewers: 5
           reviewers: ${{ vars.REVIEWERS }}
           assignees: ${{ github.actor }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Show result
         if: always()
         run: echo '${{ steps.assign.outputs.result }}' # success or failure
