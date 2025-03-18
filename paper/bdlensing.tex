@@ -13,14 +13,19 @@
 
 %
 \documentclass{aa}  
-\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
 
 %
 \usepackage{graphicx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{txfonts}
-
-\usepackage{subcaption} % Required for creating subfigures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[options]{hyperref}
+% To add links in your PDF file, use the package "hyperref"
+% with options according to your LaTeX or PDFLaTeX drivers.
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+% To add links in your PDF file, use the package "hyperref"
+% with options according to your LaTeX or PDFLaTeX drivers.
+%
 \usepackage{natbib}
 \bibpunct{(}{)}{;}{a}{}{,} % to follow the A&A style
 %\usepackage{enumitem}
@@ -28,93 +33,34 @@
 \usepackage{upgreek}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{amsmath}    % Advanced maths commands
-\usepackage[super]{nth}
 %\usepackage{amssymb}
-\usepackage{orcidlink}
 %
 
 \newcommand{\nlens}{15}
-\newcommand{\newedit}[1]{{#1}} %\textcolor{magenta}{#1}}
 
 \begin{document} 
 
 
    \title{Investigating the relation between environment and internal structure of massive elliptical galaxies using strong lensing}
 
-   \titlerunning{Relation between environment and internal structure of massive ellipticals}
-   \authorrunning{Adnan et al.}
-
-   
    \subtitle{}
 
-   \author{S M Rafee Adnan\inst{\ref{uofl},\ref{sustphy},\ref{camsust}}\fnmsep\thanks{These authors contributed equally to this work.}\fnmsep\thanks{Corresponding authors, SMRA: \href{mailto:rafee.adnan.21@gmail.com}{rafee.adnan.21@gmail.com},\newline SHR: \href{mailto:sulymanhossainrobin@gmail.com}{sulymanhossainrobin@gmail.com}.}\orcidlink{0009-0009-4867-098X}
-   \and
-   Muhammad Jobair Hasan\inst{\ref{sustphy}, \ref{camsust}, \star}\orcidlink{0009-0007-8037-4027}
-   \and
-   Ahmad Al - Imtiaz\inst{\ref{sustphy},\ref{camsust},\star}\orcidlink{0009-0008-9598-3439}
-   \and
-   Sulyman H. Robin\inst{\ref{camsust},\ref{sustphy},\star,\star\star}\orcidlink{0009-0005-4283-0154}
-   \and
-   Fahim R. Shwadhin\inst{\ref{bauet},\star}\orcidlink{0009-0002-4699-8059}
-   \and
-   Anowar J.~Shajib\inst{\ref{uchicago},\ref{kicp}}\fnmsep\thanks{NHFP Einstein Fellow}\orcidlink{0000-0002-5558-888X}
-   \and
-   Mamun Hossain Nahid\inst{\ref{sustphy}}\orcidlink{0009-0007-3663-8785}
-   \and
-   Mehedi Hasan Tanver\inst{\ref{camsust},\ref{sustmath}}\orcidlink{0009-0004-5895-6213}
-   \and 
-   Tanjela Akter\inst{\ref{sustphy}}\orcidlink{0009-0004-7732-2865}
-   \and
-   Nusrath Jahan\inst{\ref{sustphy},\ref{camsust}}\orcidlink{0009-0004-7069-1780}
-   \and
-   Zareef Jafar\inst{\ref{iub},\ref{brac}}\orcidlink{0000-0002-4645-6375}
-   \and
-   Mamunur Rashid\inst{\ref{camsust},\ref{sustphy}}\orcidlink{0009-0006-0184-0628}
-   \and
-   Anik Biswas\inst{\ref{buet}}\orcidlink{0009-0009-3520-8980}
-   \and
-   Akbar Ahmed Chowdhury\inst{\ref{iubps}}\orcidlink{0009-0007-0989-8012}
-   \and
-   Jannatul Feardous\inst{\ref{ruet}}\orcidlink{0000-0002-1362-3376}
-   \and
-   Ajmi Rahaman\inst{\ref{sustmath}}\orcidlink{0009-0003-4208-4089}
-   \and
-   Masuk Ridwan\inst{\ref{buet}}\orcidlink{0009-0006-3306-2269}
-   \and
-   Rahul D. Sharma\inst{\ref{sustphy}}\orcidlink{0009-0005-8883-0707}
-   \and
-   Zannat Chowdhury\inst{\ref{iubcse}}\orcidlink{0000-0003-1436-8749}
-   \and
-   Mir Sazzat Hossain\inst{\ref{iub}}\orcidlink{0000-0001-6999-6879}
-   }
-   
+   \author{BDLensing team
+          \inst{1}
+          \and
+          C. Ptolemy\inst{2}\fnmsep\thanks{Just to show the usage
+          of the elements in the author field}
+          }
 
-    \institute{Department of Physics and Astronomy, University of Louisville, Louisville, KY 40208, USA\label{uofl}
-    \and
-    Department of Physics, Shahjalal University of Science and Technology, Sylhet 3114, Bangladesh\label{sustphy}
-    \and
-    Copernicus Astronomical Memorial of SUST, Shahjalal University of Science and Technology, Sylhet 3114, Bangladesh\label{camsust}
-    \and 
-    Department of Electrical and Electronic Engineering, Bangladesh Army University of Engineering \& Technology, Qadirabad, Natore 6431, Bangladesh\label{bauet}
-    \and
-    Department of Astronomy \& Astrophysics, University of Chicago, Chicago, IL 60637, USA\label{uchicago}
-    \and
-    Kavli Institute for Cosmological Physics, University of Chicago, Chicago, IL 60637, USA\label{kicp}
-    \and
-    Department of Mathematics, Shahjalal University of Science and Technology, Sylhet 3114, Bangladesh\label{sustmath}
-    \and
-    Center for Computational \& Data Sciences, Independent University, Bangladesh, Dhaka 1229, Bangladesh\label{iub}
-    \and
-    Department of Computer Science and Engineering, Brac University, Dhaka 1212, Bangladesh \label{brac}
-    \and
-    Department of Electrical and Electronic Engineering, Bangladesh University of Engineering and Technology, Dhaka 1205, Bangladesh\label{buet}
-    \and
-    Department of Physical Science, Independent University, Bangladesh, Dhaka 1229, Bangladesh\label{iubps}
-    \and
-    Department of Electrical \& Electronic Engineering, Rajshahi University of Engineering \& Technology, Rajshahi 6204, Bangladesh\label{ruet}
-    \and
-    Department of Computer Science and Engineering, Independent University, Bangladesh, Dhaka 1229, Bangladesh\label{iubcse}
-    }
+   \institute{Institute for Astronomy (IfA), University of Vienna,
+              T\"urkenschanzstrasse 17, A-1180 Vienna\\
+              \email{wuchterl@amok.ast.univie.ac.at}
+         \and
+             University of Alexandria, Department of Geography, ...\\
+             \email{c.ptolemy@hipparch.uheaven.space}
+             \thanks{The university of heaven temporarily does not
+                     accept e-mails}
+             }
 
    \date{Received ; accepted }
 
@@ -122,243 +68,123 @@
 % 5 {} token are mandatory
  
   \abstract
-  {Strong lensing directly probes the internal structure of the lensing galaxies. In this paper, we investigate the relation between the internal structure of massive elliptical galaxies and their environment using a sample of \nlens\ strong lensing systems. We performed lens modeling for them using \textsc{lenstronomy} and constrained the mass and light distributions of the deflector galaxies. We adopt the local galaxy density as a metric for the environment and test our results against several alternative definitions of it. We robustly find that the centroid offset between the mass and light is not correlated with the local galaxy density. This result supports using centroid offsets as a probe of dark matter theories since the environment's impact on it can be treated as negligible. Although we find a strong correlation between the position angle offset and the standard definition of the local galaxy density, consistent with previous studies, the correlation becomes weaker for alternative definitions of the local galaxy density. This result weakens the support for interpreting the position angle misalignment as having originated from interaction with the environment. Furthermore, we find the `residual shear' magnitude in the lens model to be uncorrelated with the local galaxy density, supporting the interpretation of the residual shear originating, in part, from the inadequacy in modeling the angular structure of the lensing galaxy and not solely from the structures present in the environment or along the line of sight.}
-  % % context heading (optional) 
-  % {}
-  % % aims heading (mandatory)
-  %  {To investigate the relation between internal structure of elliptical galaxies at $z \sim 0.5$ and their environment from a strong gravitational lensing analysis. Particularly, to investigate two cases of correlation: between the offset of light and mass centroids and the local galaxy density, and between the position-angle offset and the local galaxy density.}
-  %  % methods heading (mandatory)
-  %  {Using the publicly available software \textsc{lenstronomy}, we simulate images of a sample of %15
-  %  \nlens\ galaxy-galaxy lenses selected from the DESI survey. The process is based on the statistical method of Bayesian inference and utilizes the concepts of Particle Swarm Optimization (PSO) and Markov chain Monte Carlo (MCMC) sampling.}
-  %  % results heading (mandatory)
-  %  {Assuming $z \sim 0.5$, the mean centroid offset is within $200$ pc. The estimated biweight midcorrelation values for the two cases are $\sim$0.17 and $\sim$0.31, respectively.}
-  %  % conclusions heading (optional), leave it empty if necessary 
-  %  {The centroid offset is within the range predicted by the EAGLE simulation. Though the correlations are weaker than in some previous studies, the general trend is very similar. The lens model parameters embody information on dark matter haloes and can be utilized in the future. Furthermore, the estimated `external shear' parameters can be used in subsequent works based on \citet{Etherington23} and can help find flexible enough mass models for employment in future modelings.}
+  % context heading (optional) 
+  {}
+  % aims heading (mandatory)
+   {To investigate the relation between the internal structure of elliptical galaxies at $z \sim 0.5$ and their environment from a strong-gravitational lensing analysis. Particularly, to investigate two cases of correlation: between the (light and mass) centroid offset and the surrounding source density, and between the position-angle offset and the surrounding source density.}
+   % methods heading (mandatory)
+   {Using the publicly available software \textsc{lenstronomy}, we simulate images of a sample of 14 galaxy-galaxy lenses selected from the DESI survey. The process is based on the statistical method of Bayesian inference and utilizes the concepts of Particle Swarm Optimization (PSO) and Markov chain Monte Carlo (MCMC) sampling.}
+   % results heading (mandatory)
+   {Assuming $z \sim 0.5$, the mean centroid offset is within $200$ pc. The estimated biweight midcorrelation values for the two cases are $\sim$0.17 and $\sim$0.31, respectively.}
+   % conclusions heading (optional), leave it empty if necessary 
+   {The centroid offset is within the range predicted by the EAGLE simulation. Though the correlations are weaker than in some previous studies, the general trend is very similar. The lens model parameters embody information on dark matter haloes and can be utilized in the future. Furthermore, the estimated `external shear' parameters can be used in subsequent works based on \cite{Etherington23} and can help find flexible enough mass models for employment in future modelings.}
 
-\keywords{Gravitational lensing: strong, Galaxies: elliptical and lenticular, cD, Galaxies: structure
+   \keywords{MCMC -PSO --
+                gravitational lensing: strong
                }
 
-\maketitle
+   \maketitle
 %
 %-------------------------------------------------------------------
 
 \section{Introduction}
 
-% new introduction
+Strong gravitational lensing is the phenomenon of forming multiple images from a background source due to the gravitational bending of light path by a massive foreground deflector, such as a galaxy, galaxy group, or cluster. As a result, strong lensing systems are powerful probes of the mass distribution of the foreground deflector \citep[see][for a review on strong lensing by galaxies]{Shajib22}.
 
-% observed properties of elliptical galaxies correlate with environment. This is expected as galaxies evolve through interactions.
-Morphological, structural, star formation, and kinematic properties of galaxies have been found to correlate with their environment \citep{Dressler80, Treu09, Fasano15, Pelliccia19, Marasco23}. Such correlations are considered to emerge from galaxies evolving through interactions, such as mergers, strangulation, harassment, tidal compression \citep[e.g.,][]{Treu03}, with other galaxies in their environment or with the larger-scale halo \citep[e.g.,][for a result from galaxy formation simulation]{Pfeffer23}. In particular, as massive elliptical galaxies are considered to be the end product of hierarchical mergers according to the current paradigm, they are ideal probes to study the connection between their structural properties and the environment they reside in to understand the impact of various interactions on their formation and evolution.
+Whereas the observed light traces the stars in a lensing galaxy, strong lensing traces the total matter distribution, including dark and baryonic components. As a result, strong lensing can be used to study the relative alignment between dark matter and stars. Any detected offset between these two components can indicate self-interaction in the dark matter particles \citep{Harvey14, Kahlhoefer14, Robertson17}. In the $\Lambda$ cold dark matter ($\Lambda$CDM) cosmology -- the current paradigm to describe our Universe -- the EAGLE simulation predicts no significant offset $\sim$200 pc, regardless of the galaxy being a field galaxy or a cluster member \citep{Schaller15}. Although a recent merger can lead to an offset between the dark matter and stars, these systems are statistically very rare \citep{Schaller15}. On the observational front, only one system has been observed with an offset much larger than this prediction ($1.72\pm 0.42$ kpc), where the deflector consists of two merging galaxies  \citep[][]{Shu16}. %Although there was an initial report of a similar offset for a cluster-member galaxy in Abell 3827 \citep{Williams11, Massey15}, the offset was ruled out with more data \citep{Massey18}.
+\citet{Shajib19} find a root-mean-square (RMS) offset in a sample of 15 strong lenses to be 0\farcs04 (i.e., $\sim$200 pc at z$\sim$0.5) excluding three outliers, one of which has two comparable-mass deflectors potentially residing in the same parent halo. Similarly, \citet{Shajib21} constrained a 68 percent upper limit of 218$\pm$19 pc from a sample of 23 galaxy--galaxy lenses.
 
-% strong lensing provide direct way probe structure of galaxies.
-Strong gravitational lensing, the phenomenon of multiple images of a background source forming due to the gravitational bending of the light path, provides a powerful tool to probe the internal structure of the massive lensing objects (e.g., galaxies, groups, or clusters) in the foreground. Whereas the observed light distribution traces only the luminous matter distribution, strong lensing probes to the total matter distribution. As a result, strong lenses make excellent candidates for studying the structural properties, especially alignment or misalignment between the mass and light profiles, arising from the alignment or misalignment between the dark matter and the baryons, and its connection with the environment.
+The misalignment between the mass and light distributions can also be traced using the position angles of the major axes of the elliptical galaxies, which are the most common type of deflectors at the galaxy scale. Previous studies mostly found tight alignment within $\sim$10$\degr$ \citep{Keeton98b, Kochanek02, Treu09, Gavazzi12, Sluse12, Bruderer16, Shajib19, Shajib21}, with higher misalignments are accompanied by large ``external'' shear magnitude, although the vice versa is not necessary. The accompaniment of a large ``external'' shear with a large misalignment can be interpreted as systems in a crowded environment that are not yet dynamically relaxed, as they can have stellar orbits misaligned with the underlying dark matter distribution. Simulations found highly misaligned orbits in isolated systems to be unstable and rare \citep{Heiligman79, Martinet88, Adams07, Debattista15}. However, this interpretation treats ``external'' shear as originating purely from nearby line-of-sight galaxies external to the central deflector. Interestingly, \citet{Etherington23} suggested that this ``external'' shear is not purely of external origin and can arise from the inadequacy of the mass model for lensing galaxy in capturing all of its angular complexity \citep[for example, boxy/discyness, ellipticity gradient, isophotal twists;][]{VandeVyvere22, VandeVyvere22b}. This suggestion from \citet{Etherington23} makes the explanation of high misalignment as stemming from interaction with a crowded environment less favorable.
 
-% Previous studies have found slope to be uncorrelated, but PA mislignment to be correlated with environment. simulation prediction of unstable orbits, but Etherington et al. points otherwise.
-Numerous previous studies used samples of strong lensing galaxies to constrain their structural properties. These studies mostly found tight alignment between the position angles (PAs) of the mass and light distributions (within $\sim$10$\degr$) \citep{Keeton98b, Kochanek02, Treu09, Gavazzi12, Sluse12, Bruderer16, Shajib19, Shajib21}. The cases with higher misalignments also coincided with a larger than typical `external' shear magnitude, although the vice versa is not always true. `External' shear in the literature has been commonly attributed to physical origin from the nearby galaxies or structures along the line of sight. Hence, the presence of a large `external' shear with a large misalignment could be interpreted as systems in a crowded environment that are not yet dynamically relaxed, as these can have stellar orbits misaligned with the underlying dark matter distribution, given that simulations have found highly misaligned orbits in isolated systems to be unstable and rare \citep{Heiligman79, Martinet88, Adams07, Debattista15}. \citet{Treu03} indeed found a significant ($\sim$3$\sigma$) correlation between the local galaxy density \citep{Dressler80, Cooper05} and the PA misalignment. However, \citet{Etherington23} brought into question the interpretability of the `external' shear to have physical origin, as they illustrate that a large `external' shear magnitude in the best-fit lens model can arise from the inadequacy of the mass model for lensing galaxy in capturing all of its angular complexity \citep[for example, boxy- or discy-ness, ellipticity gradient, isophotal twists;][]{VandeVyvere22, VandeVyvere22b}. For that reason, \citet{Shajib24} recommend \textit{residual shear} as a more appropriate nomenclature for the additional shear field commonly included in lens models. However, the lack of physical interpretability of the shear magnitude constrained by lens modeling makes the explanation of high misalignment stemming from interaction with a crowded environment less secure. Therefore, it is necessary to investigate the connection between mass and light misalignment with the environment through direct measures, such as local galaxy density, which we set as the goal of this paper.
+In this paper, we investigate the alignment between the mass and light using a sample of \nlens\  galaxies. We present power-law mass models of these systems based on \textit{Hubble Space Telescope} (\textit{HST}) imaging data. Using our lens models, we perform two experiments. First, we check if there is a difference in the mass and light offset between isolated and non-isolated galaxies and test the prediction of no difference from the EAGLE simulation. Second, we investigate if the misalignment between light and mass major axes directly correlates with the local galaxy density. This second experiment more directly tests the hypothesis that galaxies with stellar orbits misaligned with dark matter live in crowded environments without adopting the ``external'' shear as a measure of a crowded environment.
 
-Additionally, the offset between the mass and light centroid can also provide valuable insights into the nature of the dark matter. Cold dark matter (CDM) simulations predict that the offset between the mass and light centroids should be small \citep[$\lesssim$600 pc for 95\% of the galaxies;][]{Schaller15}. On the contrary, the self-interacting dark matter (SIDM) theory predicts a larger offset between the mass and light centroids \citep{Harvey14, Kahlhoefer14, Robertson17}. However, if such offsets correlate with the environment, it could indicate that the offset is not due to the dark matter self-interaction but due to the galaxy's interaction with the environment. For that reason, we also aim in this paper to investigate the connection between the centroid offset between the mass and light with the environment. If a lack of correlation between the centroid offset and the environment is observed, then it would help establish such offsets as a robustly testable prediction of the SIDM theory.
+This paper is organized as follows. In Section \ref{sec:data}, we describe the \textit{HST} data we model. Then in Section \ref{sec:modeling_method}, we describe our lens modelling method and our lens sample. We present our results in Section \ref{sec:result}. Finally, we discuss our result and conclude the paper in Section \ref{sec:discussion}. Throughout the paper, we adopt a flat $\Lambda$CDM cosmology as the fiducial cosmology with $H_0= 70$ km s$^{-1}$ Mpc$^{-1}$ and $\Omega_{\rm m} = 0.3$.
 
-% This following paragraph is better suited for the discussion.
-%The only observed system with a significantly larger offset ($1.72\pm 0.42$ kpc) is a merging galaxy system \citep{Shu16}. Although there was an initial report of a similar offset for a cluster-member galaxy in Abell 3827 \citep{Williams11, Massey15}, the offset was ruled out with more data \citep{Massey18}. \citet{Shajib19} found a root-mean-square (RMS) offset in a sample of 15 strong lenses to be 0\farcs04 (i.e., $\sim$200 pc at z$\sim$0.5) excluding three outliers, one of which has two comparable-mass deflectors potentially residing in the same parent halo. Similarly, \citet{Shajib21} constrained a 68 percent upper limit of 218$\pm$19 pc from a sample of 23 galaxy--galaxy lenses.
+\section{Data} \label{sec:data}
 
-% this paper investigates the environment-connection for larger einstein radius galaxies. quantified environment. also, looked into the offset. mention that the lens models are first for the systems.
+Our sample comprises \nlens\ strong lensing systems (illustrated in Fig. \ref{fig:montage}). These systems were discovered as lens candidates in the Dark Energy Spectroscopic Instrument (DESI) Legacy Imaging Surveys, Data Release 7, using a deep neural network and then confirmed using the follow-up \textit{HST} imaging from the program SNAP-15867 (PI: Huang) analyzed in this paper. % Each system in our sample has multiple lensed images. In this section, we first describe the high-resolution imaging data obtained through HST. We then provide a brief overview of the lens systems in the sample.
+% \subsection{\textit{HST} imaging} \label{sec:hst_imaging}
+The \textit{HST} imaging was obtained using the Wide Field Camera 3 (WFC3) in the infrared (IR) channel using the F140W filter. The wide F140W filter covers the gap between the J and H bands that is inaccessible from the ground. 
 
-In this paper, we model a sample of \nlens\ strong lensing galaxies from \textit{Hubble} Space Telescope (HST) imaging to constrain their mass and light misalignments (or the lack thereof) and investigate their correlation with the local galaxy density. Our sample is advantageous for this particular science question for including systems with larger Einstein radii than typically found in previous samples. The Einstein radius $\theta_{\rm E}$ range of our sample is \newedit{0\farcs86--3\farcs32}, whereas the one for the Sloan Lens ACS Survey \citep[SLACS;][]{Bolton06} sample is \newedit{0\farcs69--1\farcs78} \citep{Auger09}, and that for the Strong Lensing Legacy Survey \citep[SL2S;][]{Gavazzi12} with available HST imaging is \newedit{0\farcs71--2\farcs58} \citep{Tan24, Sheu24}. The systems with larger Einstein radii tend to be groups with multiple members existing within the Einstein radius, which makes this sample better for probing the structural properties of galaxies in locally denser environments. The lens models we present in this paper are the first in the literature for these systems, which will enable future studies of their dark matter halos in combination with follow-up measurements such as the stellar kinematics \citep[e.g.,][]{Tran22, Tan24, Sheu24}.
- %---------Notes on kpc2arcsec-----%
-% Our Sample: 0.86,3.319 arcsec--> 6.66, 20.960 kpc , SLS2: $4.34 - 17.22$ kpc--> 0.52 - 4.36
-
-% old introduction
-% Strong gravitational lensing is the phenomenon of forming multiple images from a background source due to the gravitational bending of light path by a massive foreground deflector, such as a galaxy, galaxy group, or cluster. As a result, strong lensing systems are powerful probes of the mass distribution of the foreground deflector \citep[see][for a review on strong lensing by galaxies]{Shajib22}.
-
-% Whereas the observed light traces the stars in a lensing galaxy, strong lensing traces the total matter distribution, including dark and baryonic components. As a result, strong lensing can be used to study the relative alignment between dark matter and stars. Any detected offset between these two components can indicate self-interaction in the dark matter particles \citep{Harvey14, Kahlhoefer14, Robertson17}. In the $\Lambda$ cold dark matter ($\Lambda$CDM) cosmology -- the current paradigm to describe our Universe -- the EAGLE simulation predicts no significant offset $\sim$200 pc, regardless of the galaxy being a field galaxy or a cluster member \citep{Schaller15}. Although a recent merger can lead to an offset between the dark matter and stars, these systems are statistically very rare \citep{Schaller15}. On the observational front, only one system has been observed with an offset much larger than this prediction ($1.72\pm 0.42$ kpc), where the deflector consists of two merging galaxies  \citep[][]{Shu16}. %Although there was an initial report of a similar offset for a cluster-member galaxy in Abell 3827 \citep{Williams11, Massey15}, the offset was ruled out with more data \citep{Massey18}.
-% \citet{Shajib19} find a root-mean-square (RMS) offset in a sample of 15 strong lenses to be 0\farcs04 (i.e., $\sim$200 pc at z$\sim$0.5) excluding three outliers, one of which has two comparable-mass deflectors potentially residing in the same parent halo. Similarly, \citet{Shajib21} constrained a 68 percent upper limit of 218$\pm$19 pc from a sample of 23 galaxy--galaxy lenses.
-
-% The misalignment between the mass and light distributions can also be traced using the position angles of the major axes of the elliptical galaxies, which are the most common type of deflectors at the galaxy scale. Previous studies mostly found tight alignment within $\sim$10$\degr$ \citep{Keeton98b, Kochanek02, Treu09, Gavazzi12, Sluse12, Bruderer16, Shajib19, Shajib21}, with higher misalignments are accompanied by large ``external'' shear magnitude, although the vice versa is not necessary. The accompaniment of a large ``external'' shear with a large misalignment can be interpreted as systems in a crowded environment that are not yet dynamically relaxed, as they can have stellar orbits misaligned with the underlying dark matter distribution. Simulations found highly misaligned orbits in isolated systems to be unstable and rare \citep{Heiligman79, Martinet88, Adams07, Debattista15}. However, this interpretation treats ``external'' shear as originating purely from nearby line-of-sight galaxies external to the central deflector. Interestingly, \citet{Etherington23} suggested that this ``external'' shear is not purely of external origin and can arise from the inadequacy of the mass model for lensing galaxy in capturing all of its angular complexity \citep[for example, boxy/discyness, ellipticity gradient, isophotal twists;][]{VandeVyvere22, VandeVyvere22b}. This suggestion from \citet{Etherington23} makes the explanation of high misalignment as stemming from interaction with a crowded environment less favorable.
-
-% In this paper, we investigate the alignment between the mass and light using a sample of \nlens\  galaxies. We present power-law mass models of these systems based on \textit{Hubble Space Telescope} (HST) imaging data. Using our lens models, we perform two experiments. First, we check if there is a difference in the mass and light offset between isolated and non-isolated galaxies and test the prediction of no difference from the EAGLE simulation. Second, we investigate if the misalignment between light and mass major axes directly correlates with the local galaxy density. This second experiment more directly tests the hypothesis that galaxies with stellar orbits misaligned with dark matter live in crowded environments without adopting the ``external'' shear as a measure of a crowded environment.
-
-This paper is organized as follows. In Section \ref{sec:data}, we describe the HST data we modeled. Then, in Section \ref{sec:lens_modeling}, we describe our lens modeling method and our lens sample. We present our results in Section \ref{sec:result} and discuss them in Section \ref{sec:discussion}. Finally, we summarize and conclude the paper in Section \ref{sec:summary}. Throughout the paper, we adopt a flat $\Lambda$CDM cosmology as the fiducial cosmology with $H_0= 70$ km s$^{-1}$ Mpc$^{-1}$ and $\Omega_{\rm m} = 0.3$.
-
-\section{HST imaging data} \label{sec:data}
-
-Our sample comprises \nlens\ strong lensing systems (illustrated in Fig. \ref{fig:montage}). These systems were discovered as lens candidates in the Dark Energy Spectroscopic Instrument (DESI) Legacy Imaging Surveys, Data Release 7 \citep{2019AJ....157..168DNew}, using a deep neural network \citep{2020ApJ...894...78H}. They were then confirmed using the follow-up HST imaging from the program SNAP-15867 (PI: Huang).
-%https://www.stsci.edu/hst/phase2-public/15867.pro 
-
-% Each system in our sample has multiple lensed images. In this section, we first describe the high-resolution imaging data obtained through HST. We then provide a brief overview of the lens systems in the sample.
-% \subsection{HST imaging} \label{sec:hst_imaging}
-The HST imaging was obtained using the Wide Field Camera 3 (WFC3) in the infrared (IR) channel using the F140W filter. The total exposure time for each image was 1197.7 \newedit{seconds}. %The wide F140W filter covers the gap between the J and H bands that is inaccessible from the ground. 
-
-% https://www.stsci.edu/hst/phase2-public/15867.pdf 
-
-We produced science-quality reduced images by combining multiple exposures using the \textsc{astrodrizzle} software package \citep{Avila15}.\footnote{The data reduction procedure followed the \textsc{jupyter} notebooks from this GitHub repository: \url{https://github.com/ajshajib/hst-lens}.} The drizzling process with \textsc{astrodrizzle} removed cosmic rays. We chose 0\farcs8 as the pixel scale of the final image after drizzling. %, and 0.08 arcsec for WFC3 IR.
-The final images were rotated through the drizzling process to make the north and east directions align with the vertical and horizontal directions, respectively. We used the \textsc{Python} package \textsc{PhotUtils} to estimate the mean background level and subtracted it from each image. The total noise per pixel was estimated by summing the background root-mean-square (RMS) level in quadrature with the Poisson noise corresponding to the background-subtracted-flux in each pixel.
+We produced science-quality reduced images by combining multiple exposures using the \textsc{astrodrizzle} software package \citep{Avila15}.\footnote{The data reduction procedure followed the \textsc{jupyter} notebooks from this GitHub repository: \url{https://github.com/ajshajib/hst-lens}.} The drizzling process with \textsc{astrodrizzle} removed cosmic rays from the single exposure images. We chose 0\farcs8 as the pixel scale of the final image after drizzling. %, and 0.08 arcsec for WFC3 IR.
+The final images were rotated through the drizzling process so that the North and East directions align with the vertical and horizontal directions, respectively. We used the \textsc{Python} package \textsc{PhotUtils} to estimate the mean background light and subtracted it from each image. The total noise per pixel was estimated by summing in quadrature the background root-mean-square level with the Poisson noise corresponding to the background-subtracted-flux in each pixel.
 
 
 % example https://arxiv.org/pdf/2008.11724.pdf and https://arxiv.org/pdf/1807.09278.pdf
 
 
-\begin{figure*}
-	\includegraphics[width=\textwidth]{figures/lens_montage.pdf}
-	\caption{\label{fig:montage}
-Montage of \nlens\ strong lensing systems modeled in this paper. These systems were identified as lens candidates using a deep neural network from the DESI Legacy Imaging Surveys data. Their lensing nature was then confirmed through high-resolution HST imaging displayed here. Each image was obtained with the WFC3 IR channel in the F140W filter. Up is aligned with the \newedit{north}, and the left-hand direction is aligned with the east in these images. The white bar in each panel indicates a scale of 1\arcsec.}
-\end{figure*}
 
-% need table of model parameters, example https://arxiv.org/pdf/2008.11724.pdf
-\renewcommand{\arraystretch}{1.3}
-\begin{table*}
-\begingroup
-	\setlength{\tabcolsep}{4pt} % Default value: 6pt
-	\renewcommand{\arraystretch}{1.3} % Default value: 1
 
-\caption{\noindent
-Summary for the model setups for the \nlens\ strong lensing systems in our sample. The description of each model setting is described in Section \ref{sec:lens_modeling}. The contributing modelers for each system are also tabulated. For some systems, we have imposed a prior condition on the satellite galaxy's Einstein radius for it to scale with the mass, assuming the mass-to-light ratio is the same for both the central deflector and the satellite. This condition is denoted with $\theta_{\rm E, Cen}/\theta_{\rm E, Sat} = \sqrt{{\rm flux_{Cen}}/{\rm flux_{Sat}}}$ for the cases it was used.
-\label{table:lens_profiles}
-}
+\section{Lens modeling} \label{sec:modeling_method}
 
-\begin{tabular}{llllcl}
-\hline
-
-System &
-  Mass Profiles &
-  Lens-light profiles &
-  Source-light profiles &
-  Additional Priors &
-  Modeler(s) \\ \hline
-  \hline
-J0132-1600 &
-  EPL, Shear &
-  Double Elliptical S\'ersic &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 10$)\end{tabular} &
-  -- &
-  FRS, AB \\ \hline
-J0136+0008 &
-  EPL, SIE, Shear &
-  \begin{tabular}[l]{@{}l@{}}Double Elliptical S\'ersic, \\ Satellite: Elliptical S\'ersic\end{tabular} &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 10$)\end{tabular} &
-  \begin{tabular}[l]{@{}l@{}}$ q_\text{m} $ \textgreater $ q_\text{L} $, \\ $\dfrac{\theta_{\rm E, Cen}}{\theta_{\rm E, Sat}} = \sqrt{\dfrac{\rm flux_{Cen}}{\rm flux_{Sat}}}$  \end{tabular} &
-  SHR, FRS, AAC \\ \hline
-J0201-2739 &
-  EPL, SIE, Shear &
-  \begin{tabular}[l]{@{}l@{}}Double Elliptical S\'ersic, \\ Satellite: Elliptical S\'ersic\end{tabular} &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 8$)\end{tabular} &
-  \begin{tabular}[l]{@{}l@{}}$ q_\text{m} $ \textgreater $ q_\text{L} $, \\ $\dfrac{\theta_{\rm E, Cen}}{\theta_{\rm E, Sat}} = \sqrt{\dfrac{\rm flux_{Cen}}{\rm flux_{Sat}}}$ \end{tabular} &
-  SMRA \\ \hline
-J0215-2909 &
-  EPL, Shear &
-  Double Elliptical S\'ersic &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Double Shapelets \\ ($n_\text{max} = 10$)\end{tabular} &
-  $ q_\text{m} $ \textgreater $ q_\text{L} $ &
-  NJ \\ \hline
-J0618+5018 &
-  EPL, SIE, Shear &
-  \begin{tabular}[l]{@{}l@{}}Double Elliptical S\'ersic, \\ Satellite: Elliptical S\'ersic\end{tabular} &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 10$)\end{tabular} &
-  \begin{tabular}[l]{@{}l@{}}$ q_\text{m} $ \textgreater $ q_\text{L} $, \\ $\dfrac{\theta_{\rm E, Cen}}{\theta_{\rm E, Sat}} = \sqrt{\dfrac{\rm flux_{Cen}}{\rm flux_{Sat}}}$ \end{tabular} &
-  AAI, AR \\ \hline
-J0923+1829 &
-  EPL, SIE, Shear &
-  \begin{tabular}[l]{@{}l@{}}Single Elliptical S\'ersic, \\ Satellite: Elliptical S\'ersic\end{tabular} &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 10$)\end{tabular} &
-  -- &
-  MR \\ \hline
-J1018-0121 &
-  EPL, Shear &
-  Single Elliptical S\'ersic &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 10$)\end{tabular} &
-  -- &
-  MJH \\ \hline
-J1101-0602 &
-  EPL, Shear &
-  Double Elliptical S\'ersic &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 8$)\end{tabular} &
-  -- &
-  SMRA, JF \\ \hline
-J1205+4110 &
-  EPL, Shear, Flexion &
-  Double Elliptical S\'ersic &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 10$)\end{tabular} &
-  -- &
-  SHR, MSH \\ \hline
-J1501+5208 &
-  EPL, Shear &
-  Double Elliptical S\'ersic &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 8$)\end{tabular} &
-  -- &
-  MHN \\ \hline
-J1537+1443 &
-  EPL, Shear &
-  Single Elliptical S\'ersic &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 6$)\end{tabular} &
-  -- &
-  MHT \\ \hline
-J1554+0443 &
-  EPL, Shear &
-  Double Elliptical S\'ersic &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 5$)\end{tabular} &
-  -- &
-  ZJ \\ \hline
-J1624+0129 &
-  \begin{tabular}[l]{@{}l@{}}EPL,  SIE, Shear\end{tabular} &
-  \begin{tabular}[l]{@{}l@{}}Double Elliptical S\'ersic, \\ Satellite: Elliptical S\'ersic\end{tabular} &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 10$)\end{tabular} &
-  -- &
-  AAI \\ \hline
-J1709+3154 &
-  EPL, Shear &
-  Double Elliptical S\'ersic &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 8$)\end{tabular} &
-  -- &
-  TA \\ \hline
-J2158+0257 &
-  EPL, Shear &
-  Double Elliptical S\'ersic &
-  \begin{tabular}[l]{@{}l@{}}Elliptical S\'ersic, \\ Shapelets ($n_\text{max} = 10$)\end{tabular} &
-  -- &
-  FRS \\ \hline
-\end{tabular}
-\endgroup
-\end{table*}
-\section{Lens modeling} \label{sec:lens_modeling}
-We used the publicly available software package \textsc{lenstronomy}\footnote{\url{https://github.com/lenstronomy}} \citep{Birrer15, Birrer18} to model all the lenses in our sample. The lens modeling program \textsc{lenstronomy} has proven to be effective, as demonstrated in the Time-Delay Lens Modelling Challenge, where various teams successfully used the software to recover the lens parameters \citep{Ding21}. Additionally, \textsc{lenstronomy} has been applied in numerous areas related to strong gravitational lensing, including time-delay cosmography \citep{Birrer19, Shajib20, Shajib22b} and the study of dark-matter substructures \citep{Gilman20}.
-
-In section \ref{ssec:lens_model_ingredients}, we discuss all the model components used to describe the mass and light distributions of the deflector and source galaxies. In section \ref{modeling_procedure}, we describe our procedure for lens modeling and obtaining the posterior probability distribution function (PDF) of each model parameter. Finally, in section \ref{ssec:specific_descriptions}, we describe specific characteristics of each lens system that informed the choices we made in setting up the lens model.
+To model the lenses, we used the lens modeling software \textsc{lenstronomy}, publicly available on GitHub\footnote{\url{https://github.com/lenstronomy}} \citep{Birrer15, Birrer18}.
 
 \subsection{Lens model ingredients}
-\label{ssec:lens_model_ingredients}
+We need to pick baseline models for the lens mass and light to create a method that works well for many lensing systems of different sizes and shapes. These models can be adjusted case by case to fit the specific goals of the investigator. The idea is to make sure the models fit the data nicely while being flexible enough for a wide range of lens systems.\\
 
-We adopted a baseline model for the lens mass and light distribution that works well for the majority of lensing systems in our sample of different sizes and shapes. This baseline model is then adjusted to adapt to the specific complexity of a given system when necessary. Our goal for the baseline model is to fit the data nicely while being flexible enough for a wide range of lens systems. %Section \ref{modeling_procedure} will describe our modeling procedure. %, which involves tweaking the model until an optimal model is obtained.
+First, we commence with fundamental models for the lens mass, light, and source-light distribution, as delineated in Sections \ref{sec:mass_profile} and \ref{sec:light_profile}. Subsequently, we employ a Particle Swarm Optimization (PSO) routine in \textsc{Lenstronomy} to ascertain the optimal fit. Following this, we assess the model's fidelity to the data. Should it prove inadequate, we incrementally incorporate additional intricacies into the model. This may entail integrating more mass or light specifications to accommodate supplementary elements such as satellites, intricate structures adjacent to the Einstein ring, or additional lensed sources.\\
 
-% First, we commence with fundamental models for the lens mass, light, and source-light distribution, as delineated in Sections \ref{sec:mass_profile} and \ref{sec:light_profile}. Subsequently, we employ a Particle Swarm Optimization (PSO) routine in \textsc{Lenstronomy} to ascertain the optimal fit. Following this, we assess the model's fidelity to the data. Should it prove inadequate, we incrementally incorporate additional intricacies into the model. This may entail integrating more mass or light specifications to accommodate supplementary elements such as satellites, intricate structures adjacent to the Einstein ring, or additional lensed sources.\\
-
-% We also adjust the data, adding or removing bits using masks to make the modeling easier. We run the PSO routine again after each change until the chosen mass and light models give a good fit. Next, we figure out the likelihood of different model parameters using a Markov Chain Monte Carlo (MCMC) routine. For both modeling processes, we required an approximate $\chi^2\sim 1$ to fit our data which is a satisfactory value that covers most of our unique models. The PSO and MCMC routines in \textsc{Lenstronomy} use a package called \textsc{cosmoHammer}, which includes \textsc{emcee}, a smart way to explore different possibilities in the model. This approach helps us model lens systems in a detailed and effective manner.
+We also adjust the data, adding or removing bits using masks to make the modeling easier. We run the PSO routine again after each change until the chosen mass and light models give a good fit. Next, we figure out the likelihood of different model parameters using a Markov Chain Monte Carlo (MCMC) routine. For both modeling processes, we required an approximate $\chi^2\sim 1$ to fit our data which is a satisfactory value that covers most of our unique models. The PSO and MCMC routines in \textsc{Lenstronomy} use a package called \textsc{cosmoHammer}, which includes \textsc{emcee}, a smart way to explore different possibilities in the model. This approach helps us model lens systems in a detailed and effective manner.
 
 
 \subsubsection{Mass profile} \label{sec:mass_profile}
 % EPL, external shear 
 % example https://arxiv.org/pdf/1807.09278.pdf
 \paragraph{\textbf{EPL:}}
-% \subsubsubsection{\textbf{EPL:}}
- The convergence for the elliptical power law \citep[EPL;][]{Tessore15} mass profile is given by
+ The Elliptical Power Law mass profile is given by, 
 
- \begin{equation}
+$$
 \kappa\left(x, y\right)=\frac{3-\gamma}{2}\left(\frac{\theta_{\mathrm{E}}}{\sqrt{q x^2+y^2 / q}}\right)^{\gamma-1}.
-\end{equation}    
+$$
+
+The Elliptical Power Law (EPL) mass profile represents a specific form of the mass distribution used in gravitational lensing studies. It describes the convergence (\(\kappa\)) in terms of the coordinates \(x\) and \(y\) in an elliptical system, where \(x\) and \(y\) represent the Cartesian coordinates on the lens plane, and \(\theta_{\mathrm{E}}\) is the Einstein radius. The parameter \(q\) denotes the axis ratio of the ellipse, representing the elongation or flattening of the mass distribution.\\
+
+\paragraph{\textbf{SIE:}} Singular Isothermal Ellipsoid (SIE) is given by,
+
+$$
+\kappa\left(x, y\right)=\frac{1}{2}\left(\frac{\theta_{\mathrm{E}}}{\sqrt{q x^2+y^2 / q}}\right)
+$$
+
+The factor $\frac{1}{2}$ is introduced to scale the convergence appropriately for the SIE model. We used this profile for the fit of the neighboring satellite galaxies.
+\\
+
+\paragraph{\textbf{Shear:}} Shear is a measure of the differential stretching or distortion of the images of background sources due to the gravitational lensing effect. It quantifies how much the shapes of background objects are elongated or deformed by the gravitational field of the lensing mass.\\
+
+
+The pseudo-vector $\bm{\gamma}$=$(\gamma_1, \gamma_2)$ on the lens plane, whose components are
 %
-%It describes the projected surface mass density, and convergence (\(\kappa\)) in terms of the coordinates \(x\) and \(y\) on the lens plane. 
-Here, \(\theta_{\mathrm{E}}\) is the Einstein radius. The parameter \(q\) denotes the axis ratio of the ellipse, representing the flattening of the projected mass distribution. In this formulation, the coordinate system is assumed to be aligned with the major and minor axes, where the major axis can have a PA with respect to the on-sky coordinate frame.
 
-\paragraph{\textbf{SIE:}} In situations where a nearby satellite galaxy has a notable impact on the lensing effects experienced by source galaxies, we adopt a singular isothermal ellipsoid (SIE) profile to characterize its mass distribution, which is a special case of the EPL mass profile with \(\gamma=2\).
+\begin{equation}
+    \begin{aligned}
+        & \gamma_1(\bm{x})=\frac{1}{2}\left(\Psi_{11}-\Psi_{22}\right) \\
+        & \gamma_2(\bm{x})=\Psi_{12}=\Psi_{21},
+    \end{aligned}
+\end{equation}
 
-\paragraph{\textbf{Residual Shear:}} We adopt the residual shear field to account for any additional shear that is not captured by the EPL or SIE profiles. %While the fundamental nature of shear remains consistent, the \texttt{ShearGammaPsi}  model specifically provides a refined approach to the residual shear profile by expressing the external shear with $\gamma_{\text{ext}}$ and $\phi_{\text{ext}}$, directly focusing on its magnitude and orientation.
-The residual shear field is parametrized with two parameters: the shear magnitude $\gamma_{\rm shear}$ and angle $\phi_{\rm shear}$.
-% \begin{equation}
-% \gamma_{\text{shear}} = \sqrt{\gamma_1^2 + \gamma_2^2}, \\
-% \phi_{\text{shear}} = \frac{1}{2} \arctan\left(\frac{\gamma_2}{\gamma_1}\right)
-% \end{equation}
+%
+This is called the shear. The eigenvalues of the shear matrix are
+$$
+\pm \sqrt{\gamma_1^2+\gamma_2^2}= \pm \gamma \text {. }
+$$
+Thus, there exists a coordinate rotation by an angle $\phi$ such that
+$$
+\left(\begin{array}{cc}
+\gamma_1 & \gamma_2 \\
+\gamma_2 & -\gamma_1
+\end{array}\right)=\gamma\left(\begin{array}{cc}
+\cos 2 \phi & \sin 2 \phi \\
+\sin 2 \phi & \cos 2 \phi
+\end{array}\right)
+$$
 
-% \paragraph{\textbf{ShearGammaPsi:}} ShearGammaPsi estimates the external residual shear in a way that is analogous to the residual shear profile, but with key differences in parameterization. Unlike the residual shear model, which estimates external shear using the components \(\gamma_1\) and \(\gamma_2\), the ShearGammaPsi model expresses the external residual shear through the parameters \(\gamma_{\text{ext}}\) and \(\psi_{\text{ext}}\). These represent the magnitude and orientation of the external shear, respectively, offering a more direct description of the shear's impact on the system.
-
-
-\paragraph{\textbf{Flexion:}} The second-order lensing effect can be expressed with four flexion terms \citep{Schneider08}, which are the third derivatives of the lensing potential. The flexion is responsible for introducing a curvature and other anisotropic distortions
+\paragraph{\textbf{Flexion:}} The second-order lensing effect can be expressed in terms of the derivatives of the shear (or in terms of the third derivatives of the potential). We can construct complex quantities
+$$
+F= F_1 + iF_2 = \left(\gamma_{\mathrm{1,1}} + \gamma_{\mathrm{2,2}}\right) + i\left(\gamma_{\mathrm{2,1}} - \gamma_{\mathrm{1,2}}\right)
+$$
+$$
+G= G_1 + iG_2 = \left(\gamma_{\mathrm{1,1}} - \gamma_{\mathrm{2,2}}\right) + i\left(\gamma_{\mathrm{2,1}} + \gamma_{\mathrm{1,2}}\right)
+$$
+which are called first and second flexion, respectively. They describe second-order distortions of the images of lensed sources. The flexion is responsible for introducing a curvature and other anisotropic distortions
 in the images.
 
 
@@ -366,253 +192,194 @@ in the images.
 % See: http://burro.case.edu/Academics/Astr323/Lectures/Lecture20230912.pdf
 % S\'ersic or double S\'ersic for lens galaxy
 % S\'ersic + shapelets for source galaxy
-\paragraph{\textbf{Elliptical S\'ersic:}}
-We chose the elliptical S\'ersic function \citep{Sersic68} to model the deflector light profile. The S\'ersic profile is parameterized as
-%
+\paragraph{\textbf{S\'ersic ELLIPSE:}}
+We chose the elliptical S\'ersic function (S\'ersic 1968) to model the deflector light profile. The S\'ersic profile is parameterized as
+
+$$
+I\left(x_1, y_2\right)=I_{\mathrm{e}}\, \exp \left[-k\left\{\left(\frac{\sqrt{x^2+y^2 / q_{\mathrm{L}}^2}}{\theta_{\mathrm{eff}}}\right)^{1 / n_{\text {S\'ersic }}}-1\right\}\right] .
+$$
+
+where $R_{\rm eff}$ is the effective radius, $I_e$ is the surface brightness at $R_{\rm eff}$, $q_L$ is axis ratio, $n_{\rm S\'ersic}$ is the Sérsic index, and $k$ is a normalizing constant so that $R_{\rm eff}$ becomes the half-light radius (Sérsic 1968).
+\\
+\paragraph{\textbf{SHAPELETS:}} % Ref: arXiv:1505.00198v1
+\\
+This profile describes the light distribution of the Source Galaxy. The surface brightness distribution \( S(x, y) \) can be effectively expanded as a sum over shapelet basis functions:
 \begin{equation}
-I\left(x, y\right)=I_{\mathrm{e}}\, \exp \left[-k\left\{\left(\frac{\sqrt{x^2+y^2 / q_{\mathrm{L}}^2}}{R_{\mathrm{eff}}}\right)^{1 / n_{\text {S\'ersic }}}-1\right\}\right]
-,
+    S(x, y) = \sum_{n_x=0}^{\infty} \sum_{n_y=0}^{\infty} c_{n_x,n_y} \bm{\phi}_{n_x,n_y}(x, y)
 \end{equation}
-%
-where $R_{\rm eff}$ is the effective radius, $I_{\rm e}$ is the surface brightness at $R_{\rm eff}$, $q_{\rm L}$ is axis ratio, $n_{\text{S\'ersic}}$ is the S\'ersic index, and $k$ is a normalizing constant so that $R_{\rm eff}$ becomes the half-light radius.
+The corresponding shapelet coefficients, \( c_{n_x,\,n_y} \), are determined by performing the overlap integral:
+\begin{equation}
+    c_{n_x,n_y} = \int \int dx \, dy \, S(x, y) \bm{\phi}_{nx,\,ny}(x, y)
+\end{equation}
+Here, \(\bm{\phi}_{nx,ny}(x, y)\) is the two-dimensional Cartesian shapelet function which can be written as the tensor product of two one-dimensional shapelet function, as
+\begin{equation}
+\begin{aligned}
+    \bm{\phi}_{n_x,n_y}(x, y) & \equiv \phi_{n_x}(x) \otimes \phi_{n_y}(y) \\
+    &= \beta^{-1} b_{n_x}(\beta^{-1}x) \otimes b_{n_y}(\beta^{-1}y)
+\end{aligned}
+\end{equation}
+Where \( \beta \) represents the characteristic length-scale of the galaxy, and the one-dimensional, dimensionless shapelets function is given by,
+\begin{equation}
+    b_n(x) \equiv \frac{2^n \sqrt{\pi}}{(2n)!} H_n(x) e^{-\frac{x^2}{2}}
+\end{equation}
+In this equation, \( n \) is a non-negative integer, and \( H_n(x) \) is a Hermite polynomial of order \( n \).
 
-\paragraph{\textbf{Shapelets:}}% Ref: arXiv:1505.00198v1
-Along with the elliptical S\'ersic profile, we used a basis set of shapelets (i.e., 2D Gauss--Hermite polynomials) to describe the light distribution of the source galaxy. The maximum polynomial order $n_\text{max}$, determines the number of shapelet components $N_\text{shapelets}$, with $N_\text{shapelets} = (n_\text{max} + 1)(n_\text{max}+2)/2$. Initially, we set $n_\text{max} = 6$ as the default for all systems. However, for systems with more complex structures on the lensed arcs, we increased the order $n_\text{max}$ through trial and error to enhance the model’s goodness of fit. The specific $n_\text{max}$ values chosen for each system are mentioned in Table \ref{table:lens_profiles}.
+\subsection{Modelling procedure}
 
-% This profile describes the light distribution of the Source Galaxy. The surface brightness distribution \( S(x, y) \) can be effectively expanded as a sum over shapelet basis functions:
-% \begin{equation}
-%     S(x, y) = \sum_{n_x=0}^{\infty} \sum_{n_y=0}^{\infty} c_{n_x,n_y} \bm{\phi}_{n_x,n_y}(x, y)
-% \end{equation}
-% The corresponding shapelet coefficients, \( c_{n_x,\,n_y} \), are determined by performing the overlap integral:
-% \begin{equation}
-%     c_{n_x,n_y} = \int \int dx \, dy \, S(x, y) \bm{\phi}_{nx,\,ny}(x, y)
-% \end{equation}
-% Here, \(\bm{\phi}_{nx,ny}(x, y)\) is the two-dimensional Cartesian shapelet function which can be written as the tensor product of two one-dimensional shapelet function, as
-% \begin{equation}
-% \begin{aligned}
-%     \bm{\phi}_{n_x,n_y}(x, y) & \equiv \phi_{n_x}(x) \otimes \phi_{n_y}(y) \\
-%     &= \beta^{-1} b_{n_x}(\beta^{-1}x) \otimes b_{n_y}(\beta^{-1}y)
-% \end{aligned}
-% \end{equation}
-% Where \( \beta \) represents the characteristic length-scale of the galaxy, and the one-dimensional, dimensionless shapelets function is given by,
-% \begin{equation}
-%     b_n(x) \equiv \frac{2^n \sqrt{\pi}}{(2n)!} H_n(x) e^{-\frac{x^2}{2}}
-% \end{equation}
-% In this equation, \( n \) is a non-negative integer, and \( H_n(x) \) is a Hermite polynomial of order \( n \).
+\subsubsection{Initial setup}
+% masking, pre-processing of image, psf, intial mass, light profile, source profiles (Rafee)
+A cropped section encompassing the lens and its immediate surroundings is chosen to establish an appropriate field of view (FOV) within the entire image. A universally applicable Point Spread Function (PSF) is employed for all the lensing systems. A circular or perhaps elliptical mask, with an appropriate radius, is created to exclusively encompass the deflector-light distribution and associated arcs. In cases where there exists a nearby galaxy or star, these are deliberately masked out, unless a specific decision is made to model the light profile of a satellite or companion galaxy, e.g., for \ref{model:2739} DESIJ0201-2739.
 
-\subsection{Modeling procedure}
-
-\label{modeling_procedure}
-% After reducing the data of the sample of lensing systems and selecting the possible ingredient lens-mass, lens-light, and source-light profiles, we model each system case-by-case in the methodology described in this subsection.
-In this subsection, we describe our modeling procedure: setup of the image cutout and point spread function (PSF) in Section \ref{sec:PSF}, masking and initial optimization in Section \ref{sec:optimization}, and running the Markov Chain Monte Carlo (MCMC) method in Section \ref{sec:mcmc}.
-
-%Here, we will describe the step-by-step process of how we modeled our lensing systems.
-
-\subsubsection{Setting up image cutouts and PSF}\label{sec:PSF}
-% masking, pre-processing of image, psf, initial mass, light profile, source profiles (Rafee)
-We chose an image cutout encompassing the lens and its immediate surroundings from the entire HST image. We used the same pixelated PSF for all the lens systems, which was produced using the \textsc{TinyTim} software program \citep{Krist11}. A circular or elliptical mask is created depending on the system's shape to exclusively encompass the deflector light distribution and the associated arcs.
-In cases where there exists a nearby galaxy or star, these are deliberately masked out unless a specific decision is made to model the light profile of a satellite, for example, for DESIJ0201$-$2739 as described in Section \ref{model:2739}.
-
-\subsubsection{Initial model optimization}\label{sec:optimization}
-
-%PSO procedure, The elements that were masked, and why, later iterative adjustment of the model (Jobair)
-After setting up the image cutouts and masks as described above, we ran the Particle Swarm Optimization (PSO) procedure for the baseline model setup. Then, we iteratively fine-tuned (i.e., through a trial-and-error process) our model setup as required by the complexity of the lens system until we achieve the desired goodness of fit. PSO is suited for this sort of iterative fine-tuning phase as it is computationally much cheaper than sampling methods such as the MCMC. %The idea is to use PSO as the primary tool while testing different hypotheses regarding the positions of the lensed arcs and counter-images, and the complexity of the underlying models. 
-% The residual maps serve as visual guides pointing out the regions where modelings are not close enough and thus steer the process of subsequent model adjustments.
-% After obtaining an optimal model setup for a given lens, we use the MCMC process to fit further and calculate the \nth{16} and \nth{84} percentile uncertainties of the parameters.
+\subsubsection{PSO \& Masking}
+%PSO procedure, The elements that were masked, and why, later iterative adjustment of the model (Zobair)
+After having an initial mask that keeps the lensed arcs, counterimages, and the other relevant regions of the images exposed, we run the PSO (``Particle Swarm Optimization'') routine in the settings of our initial model assumptions. PSO is the perfect choice for this sort of iterative modeling phase as it is computationally much cheaper than processes like MCMC (Markov Chain Monte Carlo). PSO mimics the social behavior of a group of living organisms while working together and communicating to find the global optimal values for a set of parameters under certain conditions. The idea is to use PSO as the primary tool while testing different hypotheses regarding the positions of the lensing arcs and counter-images, and the complexity of the underlying models. The residual maps serve as the visualization guides pointing out the regions where modelings are not close enough and thus steer the process of subsequent model adjustments.
+ After settling on a hypothesis about the lensing elements and the necessary characteristics of the underlying model, we use MCMC (Markov Chain Monte Carlo) process to fit further and calculate the 1$\sigma$ uncertainties of the parameters.
  
-The considered sample of the gravitational lenses contains lenses with various levels of complexity. Some of these were quite simple, and the selected baseline model was sufficient for their modeling. In contrast, others needed increasingly complex combinations of lens-light, lens-mass, and source-light profiles. 
+The considered sample of the gravitational lenses contains members of different classes of complexities. Some of these were quite simple and the selected base model was sufficient for their modeling while others needed increasingly complex combinations of light, mass, and source profiles. 
+The most common case in the addition of complexity was from not being able to remove some large residuals in the deflector centers which prompted the use of another S\'ersic light profile on top of the existing one. Another case of multiple occurrences was of the satellites near the central lensing galaxies. Masking out was not always possible as it would result in loss of the precious lensing data, and also meant we would be able to include the lensing effects of the satellites. In these cases, satellites were modeled using SIE and S\'ersic ellipse as mass and light profiles respectively. In some cases, the lensing galaxies were in environments congested with unmodeled objects of significant sizes. To account for the gravitational pulls of these objects, additional profiles like FLEXION were added. In all of these decision-makings, PSO was the touchstone on which we relied. There were also cases where profiles with different parameterizations of the same underlying physical condition were used to facilitate the required level of control. In one of such instances where the model had a high shear value in a certain direction, SHEAR\_GAMMA\_PSI profile was used instead of SHEAR.
+The most common case of red herrings happened when some models reconstructed anomalously large sources similar in shape to the lensing elements. It was due to the local linearity of the gravitational fields far from centers, which with a combination of largely offset sources essentially scale up the source without any complex transformations.
 
-The most common case for adding complexity was incorporating a second S\'ersic light profile for the deflector on top of the existing one to mitigate large residuals in the deflector centers. In some systems, our initial model provided a mass distribution with unusually high ellipticity compared to its corresponding light distribution. However, a small difference is expected between them, with the mass being generally rounder than the light \citep[e.g.,][]{bib3:Schmidt23, Sheu24}. To reduce this discrepancy, we imposed a prior condition to incentivize the mass distribution to be rounder than the light. While this prior resulted in a more plausible model regarding the mass ellipticity, other major parameters were not significantly altered.
+\subsubsection{Additional Profiles}
+%Extra mass model SIE, extra light profile, add extra shapelets (Robin)
+To customize the model for a specific lens system, we needed to add more profiles beyond our initial set. For example: \\
 
-Another case of multiple occurrences was for the satellites located near the central lensing galaxies. Masking out these satellites may not be productive as it would result in the loss of valuable lensing information, and that would also disallow us to account for the lensing perturbations caused by the satellites. In these cases, satellites were modeled using the SIE mass and the elliptical S\'ersic light profiles. We joined the centroids of the mass and light profiles for these satellites. In some cases, the lensing galaxies were in environments crowded with satellite galaxies or companions that would require too many additional mass profiles or too much complexity to explicitly model. However, to account for the higher-order lensing effects of these objects, we added a flexion field.
+\textbf{SIE}: In situations where a nearby satellite has a notable impact on the lensing effects experienced by source galaxies, we introduce a Singular Isothermal Ellipsoid (SIE) profile to characterize its mass distribution. Additionally, a S\'ersic Ellipse (S\'ersic ELLIPSE) profile is incorporated to model the light distribution of the satellite. Notably, both profiles are constrained to share the same center.\\
 
-The baseline source-light model consisted of a basis set of shapelets and one concentric elliptical S\'ersic profile. To account for extra source components, such as additional blobs or arcs distinct from the primary set of arcs or rings at the Einstein radius, additional source-light profiles (e.g., another set of shapelets) were introduced. Another common occurrence of implausible lens models during the trial-and-error phase was when the modeled source galaxy resembled a scaled-down version of the lensed arcs or rings. Given that an arc- or ring-shaped source is highly unlikely, this suggests that these implausible models have not accounted for the correct amount of lensing mass. Consequently, the predicted Einstein radius would be smaller than the accurate value. In such cases, we applied tight constraints on the source's size, thus forcing the source shape to be more regular.
+\textbf{Second SHAPELETS:} In the presence of extra lensed source components, such as blobs or arcs, distinct from the primary source structure near the Einstein ring, additional light profiles (SHAPELETS) are introduced to account for the additional source galaxy. 
 
-We considered the following general criteria for accepting a lens model to have reached an optimal setup after fine-tuning: (i) the model can reconstruct prominent lensing features observed in the HST image, (ii) model residuals are better than a set threshold \newedit{(i.e., $\chi_{\rm red}^2 < 1.2$)} ensuring an acceptable level of source reconstruction, (iii) the reconstructed source does not bear discernible similarities to the lensed arc, (iv) the logarithmic slope $\gamma$ is within the range \newedit{$1.4 < \gamma < 2.8$ \citep[following][]{Tan24}}, and (v) the model is not overfitting (i. e., the reconstructed source must not \newedit{contribute largely to the total light observed at the deflector center}). We proceeded with the model setups that fulfill these criteria for further optimization with the MCMC method.
+Second S\'ersic ELLIPSE:
 
-% \subsubsection{Ellipticity of light and mass}
+\subsubsection{Ellipticity of light and mass}
 %(Rafee)
+For some models, the ellipticity of the mass profile was initially unusually higher than the ellipticity of the light profile. So we used a custom log-likelihood function to address this problem. After using the function, the discrepancy in ellipticity was mitigated, aligning more closely with the expected values derived from prior studies.
 
-
-%For some models, the ellipticity of the mass profile was initially unusually higher than the ellipticity of the light profile. So we used a custom log-likelihood function to address this problem. After using the function, the discrepancy in ellipticity was mitigated, aligning more closely with the expected values derived from prior studies.
-
-\subsubsection{MCMC sampling}\label{sec:mcmc}
+\subsubsection{Run MCMC}
 %(Robin)
-
-After completing the PSO with a viable model, the subsequent step involved executing the MCMC sampling procedure. Commencing from the best-fit results obtained through the PSO, we continued this sampling until a satisfactory level of convergence of the parameter values was achieved. This specific initialization of the parameter values facilitates a more rapid convergence of the MCMC chain. We examined the trace of the MCMC walkers and considered a stable distribution of the walker positions for at least 1000 steps for all the non-linear parameters as the criteria for convergence. Finally, a comprehensive reassessment of the model's goodness of fit was conducted by inspecting the model residuals and the parameter values, a procedure similar to the approach employed during our fine-tuning procedure in Section \ref{sec:optimization}.
+Following the completion of the PSO with a viable model, the subsequent step involves the execution of the MCMC. Commencing from the best-fit results obtained through the PSO, this initialisation facilitates a rapid convergence of the MCMC chain. Examination of trace plots becomes important in determining the convergence status, where a stable oscillation of walker positions around the median value for all non-linear parameters indicates a successful convergence. The expected behavior of the walker position's oscillation closely resembles a Gaussian distribution, and this characteristic was verified through Corner plots. Finally, a comprehensive reassessment of the model's feasibility was conducted by inspecting the Model Plots, a procedure similar to the approach employed during the PSO process.
 % description of PSO, MCMC etc.
 
-\begin{figure*}
-	\centering
-	\includegraphics[width=1.4\textwidth]{figures/lens_models_0.pdf}
-	\caption{\label{fig:lens_models_0}
-Illustration of lens models for the first five out of 15 systems in our sample. \textbf{First column:} Image cutouts of the lensing systems. \textbf{Second column:} Reconstructed images based on the optimized lens model. The dark regions are masked-out pixels. \textbf{Third column:} Residual maps normalized by the noise levels in each pixel. \textbf{Fourth column:} Reconstructed flux distribution of the unlensed source galaxy. The yellow lines show the caustics. \textbf{Fifth column:} The magnification model, computed as the inverse of the determinant of the Jacobian matrix, reveals spatial variations in magnification due to the gravitational lensing effect. For all the lens systems, major lensing features, such as the prominent arcs, are successfully reproduced. Whereas some residuals above the noise levels are present in some cases, they would require a larger complexity in the source description (e.g., increasing the shapelet order $n_{\rm max}$) and thus significantly increase the computational time. From tests done on a few of the complex systems (e.g., J1624$+$0129), we find that increasing the complexity further does not substantially alter the lens model parameters of interest. Furthermore, the goodness-of-fit of these models is typical and sufficient for the science goals and similar ones in the literature \citep[\textit{cf.},][]{Shajib21}.
-	}
-\end{figure*}
+\subsection{Description of special systems (can be finalized later)}
 
-\begin{figure*}
-	\centering
-	\includegraphics[width=1.2\textwidth]{figures/lens_models_1.pdf}
-	\caption{\label{fig:lens_models_1}
-    Illustration of lens models for the second five out of 15 systems in our sample (continued from Fig. \ref{fig:lens_models_0}).
-	}
-\end{figure*}
-
-\begin{figure*}
-	\centering
-	\includegraphics[width=1.3\textwidth]{figures/lens_models_2.pdf}
-	\caption{\label{fig:lens_models_2}
-	  Illustration of lens models for the last five out of 15 systems in our sample (continued from Figures \ref{fig:lens_models_0} and \ref{fig:lens_models_1}).
-	}
-\end{figure*}
-
-\subsection{Specific descriptions of the lens 
-systems}
-\label{ssec:specific_descriptions}
-
-In this subsection, we describe the specific morphology and characteristics pertaining to each \newedit{strong lensing system} and state the lens model settings required to account for them. \newedit{We also summarize the specific model settings for each system in Table \ref{table:lens_profiles}.}
-
-
-
+For each model, we start with a baseline model mentioned in \ref{sec:mass_profile} and \ref{sec:light_profile}. Using an iterative process and understanding each unique situation we add further improvement discussed below. The completed models are presented in Figure \ref{fig:lens_models_0} and \ref{fig:lens_models_1}.
 
 % example in https://arxiv.org/pdf/1807.09278.pdf
 
-
+\begin{figure*}
+	\includegraphics[width=\textwidth]{figures/lens_montage.pdf}
+	\caption{\label{fig:montage}
+	Montage of all the lens systems.
+	}
+\end{figure*}
 
 \subsubsection{DESIJ0132$-$1600}
 % Anik's Model
-\label{model:0132}
-In this system, a faint arc surrounds the central deflector galaxy. The central deflector is accompanied by a large neighboring galaxy to the east and a few other smaller galaxies. We assumed the lensing effect of these neighboring galaxies to be negligible, given their relatively small size and sizable distance from the arcs, and masked over their light. We also noticed some concentrated residuals in the center of the main deflector galaxy's light, which the double S\'ersic profiles were not adequate to describe. Therefore, we put a small circular mask at the center of the main deflector galaxy.
 
-%The central deflector in this system produces a lensing effect resembling a ring shape. There is one conspicuous large object to the left of the lensing system, including that all noticeable objects have been masked out. 
-%When modeling the source light of the system, we solely utilised the shapelets profile, while the lens mass and light were modeled using EPL and S\'ersic profiles, respectively.
+The central deflector in this system produces a lensing effect resembling a ring shape. Except for one conspicuous large object to the left of the lensing system, all other noticeable objects have been masked out. When modeling the source light of the system, we solely utilised the SHAPELETS profile, while the lens mass and light were modeled using EPL and S\'ersic profiles, respectively.
 
-\subsubsection{DESIJ0136$+$0008}\label{model:0008}
-
+\subsubsection{DESIJ0136$-$0008}
 % Akbar's Model
 
-This system has two lensing galaxies of comparable sizes within the Einstein radius. Another smaller object also exists within the Einstein radius, which is potentially a third member within this group. We modeled the larger galaxy on the west as the main deflector. We also explicitly modeled the mass profile of the large companion with the SIE model. However, we assumed the lensing effect of the potential third group member is negligible, given its relatively smaller size and its distance from the arcs. Therefore, we masked over its light. \newedit{We imposed a prior constraint on the companion's Einstein radius, requiring it to scale with its mass under the assumption that the mass-to-light ratio is identical for both the main deflector and the companion. This constraint is expressed as $\theta_{\rm E, Cen}/\theta_{\rm E, Sat} = \sqrt{{\rm flux_{Cen}}/{\rm flux_{Sat}}}$, where, the subscript `Cen' corresponds to the larger deflector and the subscript `Sat' corresponds to the companion}. We also noticed some prominent residual in between these two galaxies that the double S\'ersic profiles were not adequate to describe. This non-smooth structure may potentially arise if these two galaxies are interacting or merging. We masked this non-smooth structure in the light distribution (see Fig. \ref{fig:lens_models_0}).
+This system has two lensing galaxies of comparable sizes within the Einstein radius. Another smaller object also exists within the Einstein radius, which is potentially a third-member galaxy within this group. We model the larger galaxy on the west as the main deflector. We also explicitly modeled the mass profile of the large companion with a SIE model. However, we assumed the lensing effect of the potential third group member is negligible, given its relatively smaller size and it not being in close proximity to the arcs, by masking over its light. We also noticed some prominent residual in between the two largest galaxies that the smooth S\'ersic profiles were not adequate to describe. This non-smooth structure may potentially arise if these two galaxies are interacting or merging. We masked this non-smooth structure in the light distribution (Figure \ref{fig:lens_models_0}).
 
 \subsubsection{DESIJ0201$-$2739} \label{model:2739}
 % Rafee's Model
 
-This system features a lensing arc closely resembling an ellipse, with two central galaxies within the Einstein radius. We modeled the mass distribution of both galaxies. We treated the larger galaxy as the primary deflector and used the SIE mass profile for the secondary deflector \newedit{galaxy as a satellite}. There is a small, faint object near the lensing arc in the north. Although it is unclear whether it is part of the source galaxy, we masked it to simplify the model (see Fig. \ref{fig:lens_models_0}). \newedit{We also imposed a prior condition on the satellite galaxy's Einstein radius similar to the system DESIJ0136$+$0008, described above in Section \ref{model:0008}.}
-
-%In this system, the lensing arc resembles almost an ellipse with two central components. Both components contribute to the lensing effect, so we adopted a double Sérsic profile to model the central galaxy, implementing a single Sérsic profile and SIE to model the mass of the secondary object. There is a small, faint part near the northwest of the lensing arc. It is unclear if this is part of the lensing effect, but by excluding it, we still obtained a decent result with our simpler model.
-
-%In this system, an elliptical lensing effect is evident, showing a major central component and a minor one. We attribute the primary lensing arc to the significant central galaxy while considering the contribution of the minor central galaxy using an SIE mass profile. To encompass both companions, we adopted a double S\'ersic  profile to model the central galaxy and a single S\'ersic  profile to model the other one. There is a small light source that lies on on the le To focus solely on the lensing contribution, we masked out a small source on the northwest side of the arc. Ultimately, the model generated a comprehensive elliptical ring for the system.
+In this system, an elliptical lensing effect is evident, showing a major central component and a minor one. We attribute the primary lensing arc to the significant central galaxy while considering the contribution of the minor central galaxy using an SIE mass profile. To encompass both companions, we adopted a double S\'ersic  profile to model the central galaxy and a single S\'ersic  profile to model the other one. To focus solely on the lensing contribution, we masked out a small source on the northwest side of the arc. Ultimately, the model generated a comprehensive elliptical ring for the system.
 
 \subsubsection{DESIJ0215$-$2909}
 % Milli's Model
 
-In this system, there is only one lensing galaxy inside the Einstein radius. Additionally, we observe another arc-like object northwest of the main arc. In our model, we recreated both arcs by assuming two source components, which were modeled with two separate sets of shapelets. Although there is a possibility of the outer arc being an edge-on disky galaxy located along the line of sight, adding a second source improved the residual on the counter-arcs in the southeast as well. Thus, we concluded that our model setup with the two source components is appropriate. There is also a faint arc-like object near the northwest of the lensing arc, which we masked out so as not to require further complexities in the lens model.
-
-% Prior to modeling, we masked out a blob near the southeast corner and a light structure near the northwest. This system needed two source components, each described with a shapelets profile to accurately justify our resultant model. 
-
-%At first glance, this lensing system appears to exhibit a spiral structure. Although it has a resemblance to a quad-system, its notable lensing effect qualifies it as a strong lensing candidate. Prior to modeling, we masked out a blob near the southeast corner and a light structure near the northwest. This modeling approach required the introduction of a double SHAPELETS profile to accurately represent the source contribution.
-
+At first glance, this lensing system appears to exhibit a spiral structure. Although it has a resemblance to a quad-system, its notable lensing effect qualifies it as a strong lensing candidate. Prior to modeling, we masked out a blob near the southeast corner and a light structure near the northwest. This modeling approach required the introduction of a double SHAPELETS profile to accurately represent the source contribution.
 
 \subsubsection{DESIJ0618$-$5018}
 % Nishuti's Model
-
-This system is accompanied by a few smaller galaxies, some situated close to the arc. We assumed the lensing effect for most of these neighboring galaxies to be negligible, given their relatively smaller size and distance from the arcs, and masked their light accordingly. However, through initial trial and error to fine-tune the model, we find that the relatively bright galaxy to the northwest needs to be explicitly modeled as a satellite galaxy. \newedit{We imposed a prior condition on the satellite galaxy's Einstein radius similar to the system DESIJ0136$+$0008, as described in Section \ref{model:0008}.} Similar to \ref{model:0008}, we also masked the center of the main deflector galaxy to account for the modeling insufficiency in the case of using two superimposed S\'ersic profiles.
-
-
-%Compared to other systems in our sample, this model exhibits striking similarities, featuring a prominent arc to the west of the central deflector, accompanied by a discernible counter image. Following our initial estimation, we identified the need to address a nearby blob serving as our satellite galaxy in the north-western position, necessitating the incorporation of an SIE model and corresponding S\'ersic profile. Additionally, we encountered an undesired light source in the upper corner of our major arc, requiring masking. Two similar blobs were also masked to refine the model further.
+% to be written
+Compared to other systems in our sample, this model exhibits striking similarities, featuring a prominent arc to the west of the central deflector, accompanied by a discernible counter image. Following our initial estimation, we identified the need to address a nearby blob serving as our satellite galaxy in the north-western position, necessitating the incorporation of an SIE model and corresponding S\'ersic profile. Additionally, we encountered an undesired light source in the upper corner of our major arc, requiring masking. Two similar blobs were also masked to refine the model further.
 
 
 \subsubsection{DESIJ0923$+$1829}
 % Mamunur rashid's Model
 
-This system has two central deflectors. We considered the eastern one as the main deflector and the western deflector as a satellite galaxy. To keep the complexity of the source description at a computationally feasible level, we masked the fainter extra arc beneath the more prominent one. We also masked out a region surrounding the satellite lens galaxy, as the residuals in that region would not improve with further complexity provided in the satellite's light model. Additionally, we masked out a star in the northwest and a small blob in the northeast that is potentially a line-of-sight galaxy with negligible impact. 
+In this model, we observe two central deflectors contributing to the formation of two distinct lensing features. To streamline the model, we masked the crescent-shaped lens arc created by the minor deflector. To ensure better accuracy, we recognised the need to mask the surrounding region of the satellite. Consequently, we modeled the mass of the satellite galaxy using an SIE profile and introduced a third S\'ersic profile to assist in its light modeling. Additionally, to enhance precision, we masked clearly discernible stars accompanied by diffraction spikes.
 
 \subsubsection{DESIJ1018$-$0121}
 % Jobair's Model
 
-This system has two blobs around the northeast and the southwest corners. The shapes and locations of these blobs make them very unlikely to be lensed features. Therefore, we considered them as line-of-sight structures and masked them out. %As the masked blobs are very far from the deflector center and the lensed arc, we assumed their gravitational influences on the lensing system to be negligible. Therefore, we also disregarded their gravitational influence.
+We assumed the arc spanning from around the northwest position to around the southeast position as the main component of the gravitational lensing arc with a smaller blob at around the northeast as its counter image. Masking was done by covering non-lensing elements of the image. The system is surrounded by some stars and galaxies which are masked out.
+
 
 \subsubsection{DESIJ1101$-$0602}
 % Nishi's Model (under Rafee)
 
-Similar to some other systems, we used double S\'ersic profiles to model the light profile of the central galaxy. However, the double S\'ersic profile is not sufficient to model the center of the deflector. Therefore, we masked out a small circular region at the center of the main deflector.
-
-% Adjacent to the Einstein ring, a circular blob is evident near the southeast, clearly unrelated to the system itself. To ensure accurate modeling, we masked this blob along with two additional objects due south. Throughout the modeling process, it became apparent that the central deflector was generating some extraneous lights, which we considered unnecessary and subsequently masked.
+This particular system exhibits the most circular and well-defined Einstein ring among all the models we've analyzed. Adjacent to the Einstein ring, a circular blob is evident near the southeast, clearly unrelated to the system itself. To ensure accurate modeling, we masked this blob along with two additional objects due south. Throughout the modeling process, it became apparent that the central deflector was generating some extraneous lights, which we considered unnecessary and subsequently masked. It's worth noting that only the baseline models were employed in this analysis.
 
 \subsubsection{DESIJ1205$+$4110}
+\newcommand{\suggestion}[1]{\textcolor{blue}{#1}}
 % Robin's Model
 
-In this system, a prominent central galaxy is accompanied by multiple smaller galaxies positioned within its Einstein radius. We find the nearby small galaxies within the Einstein radius to have negligible lensing effects. Therefore, we masked out their lights and excluded them from the mass model. We added a flexion field, which may have originated from the large spiral galaxies located just outside the arcs. This was necessary to accurately reproduce the distortions in the arcs, as the central deflector alone -- even after including the mass profiles of smaller galaxies -- was insufficient to reproduce their morphology to the required level. % This adjustment successfully accounted for all arcs, including the distorted one.
+Within this system, a prominent central galaxy is accompanied by multiple smaller galaxies positioned within its Einstein radius. We treated the nearby smaller galaxies as having negligible lensing effects, masking over their lights due to their size disparity and distance from the observed arcs. Employing an EPL and SHEAR model, we designated the central galaxy as the primary deflector. However, to accurately reproduce the triangular-shaped arc due northwest, this choice of mass models proved insufficient. Acknowledging the presence of nearby large elliptical galaxies outside the Einstein radius, we introduced a FLEXION model to incorporate their lensing effects. This adjustment successfully accounted for all arcs, including the distorted one.
+
 
 \subsubsection{DESIJ1501$+$5208}
 % Nahid's model
 
-This system has a little faint blob just south of the central deflector within the Einstein radius. We assumed this blob to have an insignificant contribution to the lensing effects due to its small size and consequently masked it. Although there are multiple galaxies outside the arcs, we masked out all of them as the combination of the central deflector's mass and residual shear was sufficient to reproduce the lensed features.
-%This system exhibits a crescent-shaped major lensing effect, complemented by its counter-image, indicating its candidacy as a strong lensing system. We observed a very faint object near the counter image, but we excluded it from the lensing system during the modeling process. Additionally, several objects located outside the Einstein radius were also masked. Our modeling approach involved only the baseline models. Despite our efforts, we encountered difficulty in identifying suitable parameters to model certain residual blue features within the Einstein radius. However, these features did not significantly affect the lensing parameters themselves.
+This system exhibits a crescent-shaped major lensing effect, complemented by its counter-image, indicating its candidacy as a strong lensing system. We observed a very faint object near the counter image, but we excluded it from the lensing system during the modeling process. Additionally, several objects located outside the Einstein radius were also masked. Our modeling approach involved only the baseline models. Despite our efforts, we encountered difficulty in identifying suitable parameters to model certain residual blue features within the Einstein radius. However, these features did not significantly affect the lensing parameters themselves.
 
 \subsubsection{DESIJ1537$+$1443}
 % Tanver's model
 
-% This system displays a strong lensing arc towards the south of the main deflector. The primary gravitational lensing structure extends approximately from the southwest position to around the southeast, accompanied by a smaller blob positioned due north, serving as its corresponding counter image.
-There are multiple galaxies near the line of sight in this system, with the smaller ones close to the arcs and the larger ones further away. Since such a combination of distance and mass for the nearby line-of-sight galaxies serendipitously makes their individual lensing contribution negligible, we masked all of them and ignored their mass profiles in our lens model.
+This system prominently displays a strong lensing arc towards the south of the main deflector. The primary gravitational lensing structure extends approximately from the southwest position to around the southeast, accompanied by a smaller blob positioned due north, serving as its corresponding counter image. However, the proximity of the lensing system to another galaxy blob in the northwest necessitated its exclusion through masking during the modeling process. Additionally, a smaller mask was applied close to the northeast. We employed only the baseline profiles to construct the lenses during the modeling phase.
 
 \subsubsection{DESIJ1554$+$0443}
 % Zareef's Model
 
-% This system exhibits two prominent arc features which form an asymmetric elliptical ring.
-
-In this system, two blobs are observed in the northeast and southwest regions, which are relatively far away from the lensed arcs. We masked them and excluded their mass from our lens model.
-
-%During modeling, we masked only a blob located near the southeast. Standard mass profiles and light profiles like EPL and S\'ersic  were utilized in this analysis. Two prominent arc features were observed, and following the modeling process, these features formed a complete elliptical ring.
+In this lensing system, the system itself is relatively small, with a diameter of approximately 4 arcseconds. During modeling, we masked only a blob located near the southeast. Standard mass profiles and light profiles like EPL and S\'ersic  were utilized in this analysis. Two prominent arc features were observed, and following the modeling process, these features formed a complete elliptical ring.
 
 \subsubsection{DESIJ1624$+$0129}
-% Imtiaz's model(Rafee)
+% Imtiaz's model
 
-%This system exhibits prominent lensing effects with a well-defined lensing arc and its corresponding counter-image. 
-In our model for this system, we considered the blob at the west near the arc to be a satellite galaxy. A faint blob near the central deflector (in the southeast) was masked because we assumed its effect on the lensing system to be minimal. Furthermore, we masked out some parts of the southwestern portion of the arc, as that region exhibited strong residuals that would require significantly higher complexity in the source description to resolve. However, we find from a test that increasing the source complexity does not significantly alter the lens model parameters.
-%However, upon completing the modeling process, we identified the need for further masking above the arcs themselves. Although this additional masking did not significantly alter the intended parameters for the lens, it did contribute to the overall system's light.
+This system exhibits prominent lensing effects with a well-defined major lensing component and its corresponding counter-image, clearly distinguishable. Our model detected a satellite companion westward position, which we addressed using the SIE profile. Additional elements positioned outside the Einstein radius, particularly towards the south and near the southwest direction, were excluded. However, upon completing the modeling process, we identified the need for further masking above the arcs themselves. Although this additional masking did not significantly alter the intended parameters for the lens, it did contribute to the overall system's light.
 
 
 \subsubsection{DESIJ1709$+$3154}
-% tanzilla's model (Robin)
+% tanzilla's model
 
-We masked out a small blob in the west of this system. Additionally, there are some elongated features in the southwest, identified as diffraction spikes from a nearby star that is situated outside the cutout region. We masked out these spikes.
-
-%a nearby large line of sight star. To eliminate these effects, we utilized masking techniques. Furthermore, a very faint object located to the west of the lensing system has also been masked.
+In this lensing system, three prominent arc features have been observed and modeled using our baseline models. Additionally, there are some light features in the southeast, identified as diffraction spikes from a nearby large line of sight star. To eliminate these effects, we utilized masking techniques. Furthermore, a very faint object located to the right of the lensing system has also been masked.
 
 \subsubsection{DESIJ2158$+$0257}
-% Fahim's Model (Rafee)
+% Fahim's Model
 
-In this system, there are several neighboring galaxies of various sizes in the north. We assumed their contribution to the lensing effects to be negligible due to their combination of size and distance from the lensing arc. This assumption is justified by successfully reproducing the lensed arcs with our baseline model setup. \newedit{In addition, we masked the center of the main deflector galaxy to address the inadequacy in modeling using two superimposed S\'ersic profiles (similar to \ref{model:0008}).}
-
-% To ensure accurate modeling, we strategically masked two regions within the Einstein radius and several larger nearby objects/stars, excluding contributions from line-of-sight objects and stars with diffraction spikes. Upon closer examination during modeling, we identified additional light sources near the south-west. These were present in the observed system but did not appear to be associated with any stars or our lensing system. Consequently, we decided to mask out this particular region. The central lens mass was modeled using the EPL method, while a double S\'ersic profile was employed to model the lens light.
+In this system, various objects reside within a densely populated area encompassing the Einstein radius. A significant arc is discernible, formed by the central deflector on the left side with its corresponding counter image on the right. To ensure accurate modeling, we strategically masked two regions within the Einstein radius and several larger nearby objects/stars, excluding contributions from line-of-sight objects and stars with diffraction spikes. Upon closer examination during modeling, we identified additional light sources near the south-west. These were present in the observed system but did not appear to be associated with any stars or our lensing system. Consequently, we decided to mask out this particular region. The central lens mass was modeled using the EPL method, while a double S\'ersic profile was employed to model the lens light.
 
 \section{Result} \label{sec:result}
+In this section, we present the best-fit values of both the lens model and the photometric parameters. The lens model parameters are the Einstein radius ($\theta_{E}$), the logarithmic slope $\gamma$, the mass ellipticity and position angle ($q_{m}$ and $\phi_{m}$), the light ellipticity and position angle ($q_{L}$ and $\phi_{L}$), the 'external' shears ($\gamma_{shear}$ and $\phi_{shear}$) and the effective or half-light radius $R_{eff}$. 
+The photometric parameters are $\Sigma_{10}$, $\Sigma_{10, \text{flux selected}}$, $\Sigma_{20}$, and $\Sigma_{20, \text{flux selected}}$.
+During analyses, we use the lens model parameters as measures of internal structural properties and the photometric parameters as the measures of the environments surrounding the deflectors.
 
-In this section, we present the best-fit values of the lens model parameters for our sample of modeled systems in Section \ref{sec:lens_params} and our estimates of the local galaxy densities around the lenses in Section \ref{sec:local_densities}. We then present our results on the alignment between mass and light in Section \ref{sec:alignment_results}. Finally in Section \ref{sec:lens_model_params}, we discuss the correlation between the local galaxy density and lens
-model parameters.  %We also provide the bi-weight mid-correlation for multiple pairings of parameters pertaining to the internal structure of the central deflector galaxy and the local galaxy density. 
-%In addition, the photometric redshifts from the DESI Legacy Imaging Surveys DR8 \citep{Duncan22} were used to convert the angular distances to the physical distance and to select the galaxies belonging to the environment of the lens system.
-% During the analyses, we used the lens model parameters as measures of internal structural properties and the local galaxy densities as measures of the environments surrounding the lenses.
+\subsection{Lens model parameters}
+After acquiring the best-fit values of the lens model parameters, we present the parameters directly relevant to our analyses in Table \ref{table:lens_params}. The Einstein radii represent the size of the deflectors ($\theta_{E}$ parametrizes the lens mass profile). The $\gamma$ values embed information on the distributions of dark and hadronic matters. The light and mass ellipticies show a strong correlation. We check the offsets between the mass and light position angles for correlation with the source density measures. $R_{eff}$ indicates the angular size of the lenses. The `external shear' parameters $\gamma_{shear}$ and $\phi_{shear}$ are not used in the analyses as \cite{etherington23} points toward an inadequacy in their representation of the physical shear. Instead, we use the photometric source-density measures ($\Sigma$s) denoting the densities considering a certain number of nearest sources.
+\begin{figure*}
+	\centering
+	\includegraphics[width=1.5\textwidth]{paper/figures/lens_models_0.pdf}
+	\caption{\label{fig:lens_models_0}
+	Illustration of the lens models for the lens systems in our sample.
+	}
+\end{figure*}
 
-\subsection{Lens model parameters} \label{sec:lens_params}
-
-% These are the best-fit values of the parameters described in the mass and light profiles of Section \ref{ssec:lens_model_ingredients}. Each of the lenses was considered on a case-by-case basis and fitted using a Bayesian framework. For a model to pass, the reduced $\chi^{2}$ value had to be sufficiently close to 1, and also, the main features of the corresponding system had to be reconstructed by the model. After setting the \texttt{supersampling\_factor} to 3 and running a long MCMC sampling to achieve the required level of convergence indicated by stable oscillations of walker positions around the median values, the last 1000 values of the parameters were saved (section \ref{mcmc}). Later, these values were used as pools to determine the medians, the \nth{16}, and the \nth{84} percentiles of the best-fit values of the lens model parameters. We present these best-fit parameter values in Table \ref{table:lens_params}.
-
-We present the point estimates of the lens model parameters with their $1\sigma$ uncertainties in Table \ref{table:lens_params}. The 1$\sigma$ uncertainty levels were extracted from the \nth{16} and \nth{84} percentiles of the values sampled from the posterior PDF using the MCMC method. The optimized lens models are illustrated in Figures \ref{fig:lens_models_0}, \ref{fig:lens_models_1}, and \ref{fig:lens_models_2}.
-
+\begin{figure*}\ContinuedFloat
+	\centering
+	\includegraphics[width=1.40\textwidth]{paper/figures/lens_models_1.pdf}
+	\caption{\label{fig:lens_models_1}
+	Illustration of the lens models for the lens systems in our sample (continued).
+	}
+\end{figure*}
 
 \renewcommand{\arraystretch}{1.3}
  \begin{table*}
- \centering
-  \begingroup
-	\setlength{\tabcolsep}{4pt} % Default value: 6pt
-	\renewcommand{\arraystretch}{1.3} % Default value: 1
- \caption{
- Point estimates of the lens model parameters: the Einstein radius $\theta_{\rm E}$, logarithmic slope of the mass profile $\gamma$, the mass axis ratio $q_{\rm m}$, the major axis position angle for mass $\phi_{\rm m}$, the residual shear magnitude $\gamma_{\rm shear}$, the residual shear angle $\phi_{\rm shear}$, the effective radius of the light profile $R_{\rm eff}$, the light axis ratio $q_{\rm L}$, and the major axis position angle for light $\phi_{\rm L}$. The angles $\phi_{\rm m}$, $\phi_{\rm shear}$, and $\phi_{\rm L}$ are defined as north of east. The point estimates are obtained from the medians of the 1D marginalized posteriors, and the 1$\sigma$ uncertainties are obtained from the \nth{16} and \nth{84} percentiles.\label{table:lens_params}
+ \caption{Lens model parameters: $\theta_{\rm E}$ is the Einstein radius, $\gamma$ is the logarithmic slope of the mass profile, $q_{\rm m}$ is the mass axis ratio, $\phi_{\rm m}$ is the major axis position angle for mass,  $\gamma_{\rm shear}$ is the residual shear magnitude and $\phi_{\rm shear}$ is the residual shear angle,
+ $R_{\rm eff}$ is the effective radius of the light profile,  $q_{\rm L}$ is the light axis ratio, and $\phi_{\rm L}$ is the major axis position angle for light. The angles $\phi_{\rm m}$, $\phi_{\rm shear}$, and $\phi_{\rm L}$ are defined as \textcolor{red}{X of X}. The point estimates are the medians of the 1D marginalized posteriors and the 1$\sigma$ uncertainties are obtained from the 16th and 84th percentiles.
+\label{table:lens_params}
 }
- 
- %Lens model parameters: $\theta_{\rm E}$ is the Einstein radius, $\gamma$ is the logarithmic slope of the mass profile, $q_{\rm m}$ is the mass axis ratio, $\phi_{\rm m}$ is the major axis position angle for mass,  $\gamma_{\rm shear}$ is the residual shear magnitude and $\phi_{\rm shear}$ is the residual shear angle,
- %$R_{\rm eff}$ is the effective radius of the light profile,  $q_{\rm L}$ is the light axis ratio, and $\phi_{\rm L}$ is the major axis position angle for light. The angles $\phi_{\rm m}$, $\phi_{\rm shear}$, and $\phi_{\rm L}$ are defined as \textcolor{red}{X of X}. The point estimates are the medians of the 1D marginalized posteriors and the 1$\sigma$ uncertainties are obtained from the 16th and 84th percentiles.
-
 \centering
 \begin{tabular}{lccccccccc}
 \hline
@@ -624,258 +391,97 @@ We present the point estimates of the lens model parameters with their $1\sigma$
      & (\arcsec) & & &(\degr)   & & (\degr) & (\arcsec) & & (\degr) \\
 \hline
 % column values go into lens_model_param.tex file
-%\input{lens_model_params} 
-J0132$-$1600 &         $1.403_{-0.006}^{+0.005}$ &         $2.00_{-0.00}^{+0.00}$ &         $0.676_{-0.020}^{+0.023}$ &         $-78.5_{-2.6}^{+2.5}$ &         $0.026_{-0.008}^{+0.009}$ &         $52.3_{-8.5}^{+8.6}$ &         $1.07 \pm 0.02$ &         $0.713_{-0.002}^{+0.002}$ &         $-74.4_{-0.2}^{+0.2}$ \\ 
-J0136$+$0008 &         $2.711_{-0.009}^{+0.008}$ &         $2.01_{-0.02}^{+0.02}$ &         $0.538_{-0.004}^{+0.005}$ &         $70.0_{-0.3}^{+0.3}$ &         $0.134_{-0.003}^{+0.003}$ &         $62.1_{-0.5}^{+0.5}$ &         $0.98 \pm 0.02$ &         $0.900_{-0.001}^{+0.001}$ &         $10.5_{-0.3}^{+0.3}$ \\ 
-J0201$-$2739 &         $0.867_{-0.016}^{+0.013}$ &         $1.62_{-0.02}^{+0.03}$ &         $0.948_{-0.010}^{+0.008}$ &         $-1.5_{-6.7}^{+5.6}$ &         $0.077_{-0.003}^{+0.004}$ &         $-48.9_{-1.0}^{+1.1}$ &         $0.57 \pm 0.01$ &         $0.972_{-0.007}^{+0.007}$ &         $-46.3_{-11.9}^{+10.2}$ \\ 
-J0215$-$2909 &         $1.055_{-0.001}^{+0.002}$ &         $1.80_{-0.02}^{+0.01}$ &         $0.717_{-0.005}^{+0.008}$ &         $-88.8_{-0.4}^{+0.5}$ &         $0.011_{-0.003}^{+0.002}$ &         $-81.8_{-4.4}^{+5.6}$ &         $0.92 \pm 0.02$ &         $0.794_{-0.004}^{+0.004}$ &         $-78.9_{-0.7}^{+0.6}$ \\ 
-J0618$+$5018 &         $2.265_{-0.001}^{+0.001}$ &         $2.00_{-0.00}^{+0.00}$ &         $0.726_{-0.002}^{+0.003}$ &         $83.3_{-0.3}^{+0.3}$ &         $0.074_{-0.001}^{+0.001}$ &         $79.1_{-0.4}^{+0.5}$ &         $0.82 \pm 0.02$ &         $0.792_{-0.002}^{+0.002}$ &         $31.4_{-0.3}^{+0.4}$ \\ 
-J0923$+$1829 &         $1.408_{-0.010}^{+0.011}$ &         $2.22_{-0.02}^{+0.03}$ &         $0.956_{-0.013}^{+0.011}$ &         $44.5_{-15.4}^{+16.0}$ &         $0.126_{-0.004}^{+0.005}$ &         $-10.7_{-0.7}^{+0.9}$ &         $0.54 \pm 0.01$ &         $0.986_{-0.004}^{+0.005}$ &         $-21.6_{-11.6}^{+11.9}$ \\ 
-J1018$-$0121 &         $2.915_{-0.002}^{+0.002}$ &         $1.49_{-0.01}^{+0.01}$ &         $0.727_{-0.005}^{+0.005}$ &         $45.5_{-0.3}^{+0.3}$ &         $0.079_{-0.002}^{+0.002}$ &         $45.7_{-0.5}^{+0.6}$ &         $1.23 \pm 0.02$ &         $0.815_{-0.002}^{+0.001}$ &         $37.3_{-0.2}^{+0.2}$ \\ 
-J1101$-$0602 &         $2.618_{-0.002}^{+0.002}$ &         $2.00_{-0.00}^{+0.00}$ &         $0.675_{-0.008}^{+0.006}$ &         $-22.4_{-0.7}^{+0.5}$ &         $0.038_{-0.003}^{+0.003}$ &         $-5.7_{-1.5}^{+1.4}$ &         $1.33 \pm 0.03$ &         $0.631_{-0.002}^{+0.001}$ &         $-23.6_{-0.2}^{+0.2}$ \\ 
-J1205$+$4110 &         $2.815_{-0.007}^{+0.007}$ &         $2.05_{-0.02}^{+0.03}$ &         $0.631_{-0.009}^{+0.008}$ &         $27.3_{-0.7}^{+0.7}$ &         $0.096_{-0.005}^{+0.004}$ &         $39.7_{-1.0}^{+0.8}$ &         $0.89 \pm 0.02$ &         $0.793_{-0.002}^{+0.003}$ &         $39.0_{-0.4}^{+0.5}$ \\ 
-J1501$+$5208 &         $2.603_{-0.004}^{+0.004}$ &         $2.08_{-0.03}^{+0.03}$ &         $0.830_{-0.022}^{+0.026}$ &         $-4.0_{-2.7}^{+2.1}$ &         $0.147_{-0.009}^{+0.008}$ &         $5.1_{-0.6}^{+0.6}$ &         $0.72 \pm 0.01$ &         $0.953_{-0.005}^{+0.005}$ &         $26.9_{-3.3}^{+3.0}$ \\ 
-J1537$+$1443 &         $1.552_{-0.016}^{+0.006}$ &         $2.06_{-0.08}^{+0.07}$ &         $0.656_{-0.017}^{+0.025}$ &         $90.0_{-0.7}^{+1.3}$ &         $0.025_{-0.004}^{+0.013}$ &         $-42.9_{-17.6}^{+16.2}$ &         $0.71 \pm 0.01$ &         $0.880_{-0.004}^{+0.004}$ &         $76.6_{-0.9}^{+0.9}$ \\ 
-J1554$+$0443 &         $1.502_{-0.005}^{+0.004}$ &         $1.85_{-0.02}^{+0.02}$ &         $0.800_{-0.011}^{+0.013}$ &         $-55.3_{-2.3}^{+2.2}$ &         $0.106_{-0.006}^{+0.005}$ &         $6.8_{-1.3}^{+1.5}$ &         $0.78 \pm 0.02$ &         $0.919_{-0.002}^{+0.002}$ &         $-49.4_{-0.7}^{+0.8}$ \\ 
-J1624$+$0129 &         $2.683_{-0.004}^{+0.004}$ &         $1.71_{-0.05}^{+0.05}$ &         $0.828_{-0.007}^{+0.008}$ &         $-50.2_{-0.8}^{+0.8}$ &         $0.041_{-0.004}^{+0.003}$ &         $-42.8_{-1.3}^{+1.3}$ &         $0.79 \pm 0.02$ &         $0.698_{-0.003}^{+0.002}$ &         $-56.4_{-0.3}^{+0.4}$ \\ 
-J1709$+$3154 &         $2.029_{-0.004}^{+0.004}$ &         $1.74_{-0.02}^{+0.02}$ &         $0.678_{-0.012}^{+0.011}$ &         $-36.3_{-0.5}^{+0.6}$ &         $0.040_{-0.004}^{+0.004}$ &         $-18.2_{-2.5}^{+2.8}$ &         $0.89 \pm 0.02$ &         $0.619_{-0.002}^{+0.002}$ &         $-46.7_{-0.2}^{+0.2}$ \\ 
-J2158$+$0257 &         $3.319_{-0.004}^{+0.004}$ &         $1.94_{-0.03}^{+0.03}$ &         $0.763_{-0.004}^{+0.004}$ &         $-18.3_{-0.6}^{+0.7}$ &         $0.112_{-0.005}^{+0.005}$ &         $-75.1_{-0.8}^{+1.0}$ &         $1.22 \pm 0.02$ &         $0.905_{-0.000}^{+0.001}$ &         $-8.1_{-0.1}^{+0.2}$ \\ 
-\hline
-
+\input{lens_model_params} 
 \end{tabular}
-\endgroup
 \end{table*}
 
 \renewcommand{\arraystretch}{1.3}
  \begin{table*}
- \centering
- \begingroup
-	\setlength{\tabcolsep}{4pt} % Default value: 6pt
-	\renewcommand{\arraystretch}{1.3} % Default value: 1
-
- \caption{Redshifts, local galaxy densities, and centroid offset and position angle misalignment between the mass and light. The different definitions of the local galaxy density, denoted as $\Sigma$, are as follows: $\Sigma_{10}$ refers to the projected local galaxy density calculated based on the nearest 10 neighbors; $\Sigma_{10,\text{FS}}$ is similar to $\Sigma_{10}$, but it specifically considers the nearest 10 neighbors selected based on having fluxes greater than 1\% of the corresponding central deflector's flux; $\Sigma_{20}$ and $\Sigma_{20,\text{FS}}$ follow the same definitions as above, but they take into account the 20 nearest neighbors instead of 10.
+ \caption{Photometric parameters: $\Sigma_{10}$ is the source density considering the nearest 10 neighbors, $\Sigma_{10,\text{flux selected}}$ is the source density considering the nearest 10 neighbors having fluxes greater than 1\% of the central deflector's, $\Sigma_{20}$ is the source density considering the nearest 20 neighbors, $\Sigma_{20,\text{flux selected}}$ is the source density considering the nearest 20 neighbors having fluxes greater than 1\% of the central deflector's,
 \label{table:photometric_params}
 }
+\centering
 \begin{tabular}{lccccccccc}
 \hline
-     System & Redshift $z$ &  $\Sigma_{10}$ &    $\Sigma_{10,\text{FS}}$ &    $\Sigma_{20}$ &     $\Sigma_{20,\text{FS}}$ & centroid offset  & PA misalignment,$\;\Delta \phi\;$ \\
-     & & (Mpc$^{-2}$ ) & (Mpc$^{-2}$ ) & (Mpc$^{-2}$ ) & (Mpc$^{-2}$ ) & (kpc)  & (\degr)  \\
+     System & Redshift(z) &  $\Sigma_{10}$ &    $\Sigma_{10,\text{flux selected}}$ &    $\Sigma_{20}$ &     $\Sigma_{20,\text{flux selected}}$ & centroid offset  & position-angle offset \\
+     & & (\arcsec^{-2}) & (\arcsec^{-2}) & (\arcsec^{-2}) & (\arcsec^{-2}) & (\arcsec)  & (\degr)  \\
 \hline
 % column values go into photometric_params.tex file
-%\input{photometric_params} 
-J0132$-$1600 &             $0.36 \pm 0.04$ &             $632$ &             $55$ &             $833$ &             $80$ &            $0.73 \pm 0.07$ &             $4.1 \pm 2.5$ & \\ 
-J0136$+$0008 &             $0.34 \pm 0.04$ &             $382$ &             $59$ &             $523$ &             $80$ &            $6.09 \pm 0.42$ &             $59.5 \pm 0.4$ & \\ 
-J0201$-$2739 &             $0.75 \pm 0.07$ &             $1121$ &             $869$ &             $1235$ &             $717$ &            $0.39 \pm 0.06$ &             $44.8 \pm 12.6$ & \\ 
-J0215$-$2909 &             $0.94 \pm 0.12$ &             $613$ &             $288$ &             $695$ &             $311$ &            $0.45 \pm 0.04$ &             $9.9 \pm 0.8$ & \\ 
-J0618$+$5018 &             $0.52 \pm 0.08$ &             $1235$ &             $102$ &             $621$ &             $118$ &            $1.76 \pm 0.14$ &             $52.0 \pm 0.5$ & \\ 
-J0923$+$1829 &             $0.68 \pm 0.05$ &             $452$ &             $224$ &             $397$ &             $240$ &            $0.28 \pm 0.04$ &             $66.1 \pm 19.6$ & \\ 
-J1018$-$0121 &             $0.40 \pm 0.03$ &             $1002$ &             $320$ &             $987$ &             $125$ &            $0.97 \pm 0.05$ &             $8.2 \pm 0.4$ & \\ 
-J1101$-$0602 &             $0.33 \pm 0.04$ &             $1521$ &             $163$ &             $1434$ &             $242$ &            $0.16 \pm 0.02$ &             $1.1 \pm 0.6$ & \\ 
-J1205$+$4110 &             $0.62 \pm 0.02$ &             $513$ &             $234$ &             $514$ &             $222$ &            $1.49 \pm 0.10$ &             $11.7 \pm 0.8$ & \\ 
-J1501$+$5208 &             $0.75 \pm 0.07$ &             $757$ &             $540$ &             $737$ &             $676$ &            $1.74 \pm 0.14$ &             $30.9 \pm 4.0$ & \\ 
-J1537$+$1443 &             $0.65 \pm 0.04$ &             $423$ &             $311$ &             $553$ &             $452$ &            $0.58 \pm 0.18$ &             $13.4 \pm 1.4$ & \\ 
-J1554$+$0443 &             $0.59 \pm 0.06$ &             $644$ &             $192$ &             $832$ &             $267$ &            $0.15 \pm 0.03$ &             $5.9 \pm 2.4$ & \\ 
-J1624$+$0129 &             $0.79 \pm 0.05$ &             $784$ &             $532$ &             $816$ &             $362$ &            $1.13 \pm 0.04$ &             $6.2 \pm 0.9$ & \\ 
-J1709$+$3154 &             $0.72 \pm 0.08$ &             $248$ &             $145$ &             $343$ &             $165$ &            $0.22 \pm 0.04$ &             $10.4 \pm 0.6$ & \\ 
-J2158$+$0257 &             $0.28 \pm 0.02$ &             $1379$ &             $296$ &             $1478$ &             $88$ &            $0.66 \pm 0.04$ &             $10.2 \pm 0.6$ & \\ 
-\hline
-
+\input{photometric_params} 
 \end{tabular}
-\endgroup
 \end{table*}
 
+\begin{figure}
+    \resizebox{\hsize}{!}    {\includegraphics{paper/figures/centroid_offset_vs_Sigma_10.pdf}}    \caption{\label{fig:cent_off_Sigma_all}Centroid offset vs. $\Sigma_{10}$.}
+\end{figure}
 
+\begin{figure}
+    \resizebox{\hsize}{!}    {\includegraphics{paper/figures/position_angle_offset_vs_Sigma_10.pdf}}
+    \caption{\label{fig:pos_off_Sigma_all}Position-angle offset vs. $\Sigma_{10}$.}
+\end{figure}
 
-\begin{figure*}[htbp]
+\begin{figure*}
     \centering
-    \begin{tabular}{cc}
-        \includegraphics[width=0.45\textwidth]{figures/centroid_offset_vs_Sigma_all.pdf} &
-        \includegraphics[width=0.45\textwidth]{figures/centroid_offset_vs_Sigma_10AtoD.pdf} \\
-        % (a) Centroid offset versus $\Sigma_A$ values. & (b) Centroid offset versus $\Sigma_{10}$ values from all methods.
-    \end{tabular}
-    \caption{Distribution of the centroid offset between mass and light and the local galaxy density $\Sigma$. The left-hand panel shows the distributions for variants of $\Sigma_{10}$ based on a number of galaxies chosen and applying a flux selection. The right-hand panel illustrates the distributions for various weighting schemes in the $\Sigma$ definition (i.e., definitions B, C, and D). The very weak to weak correlations for all the definitions of $\Sigma$ robustly point out the local galaxy density having no impact on the centroid offset between the mass and light.}
-    \label{fig:cent_off_Sigma}
+    \includegraphics[width=\textwidth]{paper/figures/centroid_offset_vs_Sigma_all.pdf}    \caption{\label{fig:cent_off_Sigma_all}Centroid offset vs. $\Sigma$ values.}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{paper/figures/position_angle_offset_vs_Sigma_all.pdf}
+    \caption{\label{fig:pos_off_Sigma_all}Position-angle offset vs. $\Sigma$ values.}
 \end{figure*}
 
 
+% need table of model parameters, example https://arxiv.org/pdf/2008.11724.pdf
+\renewcommand{\arraystretch}{1.3}
+\begin{table*}
+\caption{Lens model profiles: 
+\label{table:lens_profiles}
+}
+\begin{tabular}{cccc}
+\hline
+System name    & Mass Profiles   & Lens-light profiles      & Source-light profiles    \\ \hline \hline
 
-\subsection{Estimation of local galaxy densities} \label{sec:local_densities}
+DESIJ0132-1600 & EPL, Shear      & Double Elliptical S\'ersic & \begin{tabular}[c]{@{}c@{}}Elliptical S\'ersic, \\ Shapelets (n_\text{max} = 10)\end{tabular}     \\ \hline
+DESIJ0136-0008 & EPL, SIE, Shear & Double Elliptical S\'ersic & \begin{tabular}[c]{@{}c@{}}Elliptical S\'ersic, \\ Shapelets (n_\text{max} = 10)\end{tabular}      \\ \hline
+DESIJ0201-2739 & EPL, SIE, Shear & Double Elliptical S\'ersic & \begin{tabular}[c]{@{}c@{}}Elliptical S\'ersic, \\ Shapelets (n_\text{max} = 8)\end{tabular}           \\ \hline
+DESIJ0215-2909 & EPL, Shear      & Double Elliptical S\'ersic & \begin{tabular}[c]{@{}c@{}}Elliptical S\'ersic, \\ Double Shapelets (n_\text{max} = 10)\end{tabular}    \\ \hline
+\end{tabular}
+\end{table*}
 
-% \textcolor{red}{[AJS: There is a lot of $\Sigma$ definitions/variations in this section. It can be confusing to the reader if they are not introduced in a clear way. First, define the $\Sigma$ for the baseline settings, if it's $\Sigma_{10A}$, then don't include A in the subscript. The other cases can have B, C, etc. in the subscript when introduced later. Then, in a separate paragraph, start by saying that you would like to check any potential systematics arising from the specific ways this quantity is defined. Then, introduce all the other variations. When appropriate, explain the motivation behind the particular definition / weighting chosen in that variant.]}
+\subsection{Estimation of $\Sigma_{10}$}
+In our observations, we assess common environmental factors as outlined in works such as Cooper et al. (2005). Specifically, we determine the galaxy density within a circle whose radius matches the distance to the lens's tenth closest neighboring galaxy, denoted as $\Sigma_{10}$ (as described by Dressler 1980b). Similarly, we compute this density using the twentieth nearest neighbor, labeled $\Sigma_{20}$. We term this environmental measure as the "localized" density.
 
-We estimate the local galaxy density using the full field of view in the HST imaging. After background subtraction, we identified all the objects in the image (i.e., galaxies and stars) using the \texttt{detect\_sources} functionality from the image segmentation of \textsc{photutils}\footnote{\url{https://photutils.readthedocs.io/en/stable/segmentation.html}}, which is an affiliated package of \textsc{Astropy}.
-% \footnote{\url{https://www.astropy.org/}} . 
-To address blending between multiple objects, we employed the \texttt{deblend\_sources} method utilizing multiple thresholds, specifically setting the threshold 3 to 5 times the background RMS level. %We tried different thresholds for each system and checked which one automatically excludes the majority of artifacts but keeps the probable galaxies.Post-identification, we manually excluded the central deflector galaxy, parts of the lensing arcs, stars, and the remaining artifacts to have a list of only neighboring probable galaxies.
-%Post-identification, certain sources were manually excluded due to their non-adjacency to the primary lensing galaxies.
-We started with threshold 5, and if the threshold did not detect the probable faint sources, we tuned the threshold down to 3. For this lower threshold, the algorithm detects a few artifacts as source objects. After identification, we manually excluded the central deflector galaxy, parts of the lensing arcs, stars, and the remaining artifacts by checking their morphology and central brightness to retain only the neighboring galaxies. We also excluded objects with a high redshift difference with the central deflector. To consider nearby line-of-sight galaxies to be neighbors, we adopted the same criterion used in \citep{Treu09}, which is given by $z_{\text {lens }}-\delta z_{\text {lens }}<z<z_{\text {lens }}+\delta z_{\text {lens }}$, with $\delta z_{\text {lens }}=0.03\left(1+z_{\text {lens }}\right)$. We obtained the photometric redshifts from the DESI Legacy Imaging Surveys DR8 \citep{Duncan22}. We excluded only the galaxies using this photo-$z$ criterion for which the photometric redshifts are available from the DESI Legacy Imaging Surveys.
+After background subtraction, we identified sources using the \text{detect\_sources} functionality from our image segmentation approach. To address source overlap, we employed an image deblending method utilizing multiple thresholds, specifically setting the threshold 3 to 5 times the background RMS. Post-identification, certain sources were manually excluded due to their non-adjacency to the primary lensing galaxies. Our calculations encompassed four distinct scenarios: $\Sigma_{10}$, $\Sigma_{10,\text{flux selected}}$, $\Sigma_{20}$, and $\Sigma_{20,\text{flux selected}}$. Notably, in the flux-selected instances, galaxies were filtered based on a $1\%$ flux criterion relative to the central deflecting galaxy.
 
-To quantify how crowded the environment surrounding a lensing galaxy is, we used the local galaxy density \citep{Dressler80, Cooper05}. A common parameter (with high dynamic range) used in this area of investigation is ``$n^{\rm th}$ nearest-neighbor density'' \citep{Treu09}. It is defined as the density (of galaxies) considering the nearest $n$ neighbors of the central deflector. We assess common environmental factors as outlined in works such as \citet{Cooper05}. Specifically, we determined the galaxy density within a circle whose radius matches the distance to the lens's tenth closest neighboring galaxy, denoted as $\Sigma_{10}$\citep[as described by ][]{Dressler80}. This  $\Sigma_{10}$ is the baseline galaxy density used in this analysis. To test the robustness of our findings against the specific definition of $\Sigma_{10}$, we alternatively computed this density using the twentieth nearest neighbor, labeled $\Sigma_{20}$. Additionally, we also adopted a variation of these  $\Sigma_{10}$ and  $\Sigma_{20}$ quantities by excluding some galaxies based on the flux values. In these flux-selected variations (labeled $\Sigma_{10, \rm FS}$ or $\Sigma_{20, \rm FS}$), galaxies with flux less than that of the $1\%$ of the central deflecting galaxy were excluded. The motivation behind this flux selection is that the galaxies with very low fluxes (and thus low masses) have a relatively small gravitational effect on other galaxies in the environment. \newedit{Additionally, this variation excludes sources that do not have photo-$z$ estimates from the DESI Legacy Imaging Surveys. Therefore, these flux-selected variations of $\Sigma$ would lead to better purity when selecting galaxies that belong to the environment of the central deflector.} \newedit{Conversely, for the flux-selected variations, the radius covering the \nth{10} or \nth{20} neighbor becomes much larger than their `vanilla' counterpart, thus diluting the interpretability of the $\Sigma$ values as the `local' galaxy density.} Furthermore, the four definitions above are limited in their scope as they do not incorporate any information about the sizes or distances of the neighbors from the center. To check any potential systematics arising from the rather simple definition of the local galaxy density, we devise three extended definitions as follows (definition A corresponds to the definitions given above. However, we choose to omit the subscript `A' in the notation for conciseness):
-\begin{itemize}
-    \item  \textbf{Definition B:} This definition considers the total mass (inferred from the total flux) inside the $n$-th neighbor radius. Individual fluxes are added up, and the sum is normalized by the global mean flux, which is calculated from all 15 systems.
-    \\
-    \item  \textbf{Definition C:} This definition incorporates both the mass and distance from the central deflector for each of the neighboring galaxies. Each mass is weighted by the inverse of the distance, and the total sum is normalized by the global mean of the flux-over-distance quantities.
-    \\
-    \item \textbf{Definition D:} As distance is in the denominator of definition C, the terms blow up when considering galaxies very close to the central deflector. To avoid such divergences, a constant weighting of 66 kpc is used for all the galaxies inside 66 kpc. This 66 kpc is the physical distance corresponding to 10 arcsec angular distance at the mean deflector redshift ($\langle z \rangle \sim$0.581) for our sample of 15 systems. The galaxies beyond this distance are weighted as in definition C. Similar weighting schemes are discussed in \citet{Greene13} for defining weighted number counts as a metric of galaxy overdensity.
-\end{itemize}
-
-%We term this environmental measure as the "localized" density. This is our first method (A), simply counting the neighbouring galaxies.
-%Beside this, we used three different methods. For method B, we considered the flux of the galaxies which is proportional to the mass, which can be a contributing factor for measuring the influence of the neighbouring galaxies. 
-%In another method C we weighted each of the galaxies' contributions inversely proportional to their distance along with proportional flux. Here we assumed the neighbouring galaxies are in the same plane as the deflector galaxy. 
-%In some cases the closest galaxies are so close to the deflector galaxy, that the contribution 
-
-%Our calculations encompassed four distinct scenarios: $\Sigma_{10}$, $\Sigma_{10 \text{fs}}$, $\Sigma_{20}$, and $\Sigma_{20 \text{fs}}$. 
-
-We tabulate the values for $\Sigma_{10}$, $\Sigma_{10, \rm FS}$, $\Sigma_{20}$, and $\Sigma_{20, \rm FS}$ in Table \ref{table:photometric_params}. We present the correlations of these quantities with the offset or misalignment between the mass and light next in Section \ref{sec:alignment_results}.
-
-\subsection{Mass and light alignment} \label{sec:alignment_results}
-
-% \textcolor{red}{[AJS: I am writing one of my comments from the sidebar again in here. Make the description of your results tidier by following the instructions below for both Sections 4.3.1 and 4.3.2:
-% \begin{enumerate}
-%     \item State the result for your baseline setting (e.g., $\Sigma_{10A}$). Explicitly give the correlation value for this.
-%     \item Then, state how much your result changes when you vary the Sigma definitions. It's not helpful to give only the numbers and leave the reader to figure out what those numbers mean. For example, you don't even need to specify the $r$ values from the ``non-baseline'' $\Sigma$ cases in the main text. Instead, refer to the table/figure with all these numbers (i.e., $r$-values) listed.
-% \end{enumerate}
-% ]}
-
-
+\subsection{Mass and light alignment}
 % Pearson correlation coefficient: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
-In this subsection, we present our results on the alignment between the mass and light distributions in our sample of lensing systems.
-
-
-\begin{figure*}[htbp]
-    \centering
-    \begin{tabular}{cc}
-        \includegraphics[width=0.45\textwidth]{figures/position_angle_offset_vs_Sigma_all_ex_q_l.pdf} &
-        \includegraphics[width=0.45\textwidth]{figures/position_angle_offset_vs_Sigma_10AtoD_ex_q_l.pdf} \\
-        % (a) Position-angle offset versus $\Sigma_A$ values. & (b) Position-angle offset versus $\Sigma_{10}$ values from all methods.
-    \end{tabular}
-    \caption{\newedit{
-    The distribution of the PA misalignment between the mass and light, and the local galaxy density $\Sigma_{10}$ and its variations. The variations of $\Sigma_{10}$ in the left-hand panel are based on different galaxy selection criteria, including the number of galaxies considered and flux-based thresholds. The variations in the right-hand panel correspond to different weighting schemes used in defining $\Sigma_{10}$ (i.e., definitions B, C, and D). Systems with low ellipticity ($q_\text{L} > 0.9$) are excluded from both cases. While the baseline definitions $\Sigma_{10}$ and $\Sigma_{20}$ exhibit a strong correlation with the PA misalignment, other definitions show only weak correlations. Therefore, we cannot robustly conclude a strong relationship between the PA misalignment and the local galaxy density.}
-    }
-    \label{fig:pos_off_Sigma}
-\end{figure*}
-
-
+In this subsection, we present our results on the alignment between the mass and light distributions in our sample lensing systems.
 \subsubsection{Centroid}
-In this study, we adopt the bi-weight mid-correlation (hereafter, correlation) as the correlation measure between the quantities of our interest.
-The correlation between the centroid offset and the local galaxy density is weak ($r=0.21 \pm 0.04$ for the baseline definition $\Sigma_{10}$). The correlation remains between weak to very weak for three other alternative definitions of local galaxy density incorporating different numbers of nearest neighbors and minimum flux level (Fig. \ref{fig:cent_off_Sigma}, left panel). Similarly, the alternative definitions B, C, and D with different flux and distance-based weighting schemes for the $\Sigma$ quantity also give a similar result (very weak to weak correlation) (Fig. \ref{fig:cent_off_Sigma}, right panel). Therefore, we robustly find no impact of the lens galaxy's environment on the offset between the mass and light centroids.
+There is a weak positive correlation between centroid offset and $\Sigma_{10}$ ($r=0.10$). However, in the case of flux-selected densities,  the correlation becomes negative, with a value of $r= - 0.11$ for $\Sigma_{10, flux selected}$. The correlation between centroid offset and $\Sigma_{20}$ is also negative with a slightly higher coefficient of $r = - 0.27$. For $\Sigma_{20, flux selected}$, the correlation decreases slightly to $r= - 0.18$.
 
-\subsubsection{Position angle} \label{sec:pa_correlations}
+\subsubsection{Position angle}
+There is a weak correlation between the misalignment of the position angle ($\Delta \phi$) and $\Sigma_{10}$ ($r=0.23$), which matches the correlation between position angle offset ($\Delta \phi$) and $\Sigma_{20}$ ($r=0.23$). In the flux-selected instances, although the correlation is slightly higher, it remains relatively weak. The correlation between the misalignment of the position angle ($\Delta \phi$) and $\Sigma_{10, flux selected}$ is $r=0.37$, while for $ \Sigma_{20, flux selected}$, the correlation coefficient increases marginally to $r=0.39$.
 
-In investigations involving the PA of the major axis, the axis ratio of light and mass profiles of the considered system should be small enough for the major axes to be well-defined \citep{Treu09}. Therefore, when computing the associated correlations involving the PA misalignment, we excluded six out of the 15 systems that have a high light-axis ratio (i.e., $q_\text{L}>0.9$). The correlation between the PA misalignment and the local galaxy density is strong ($r= -0.61 \pm 0.05$ for the baseline definition $\Sigma_{10}$). The correlation remains strong for the alternative definition $\Sigma_{20}$, but for the definition with setting minimum flux level, the correlation becomes very weak to weak (Fig. \ref{fig:pos_off_Sigma}, left panel). For the $\Sigma$ definitions B, C, and D, the correlation stays weak (Fig. \ref{fig:pos_off_Sigma}, right panel). As a result, we cannot robustly conclude that there is a strong correlation between the PA misalignment and the local galaxy density, as the level of correlation is dependent upon the definition of the local galaxy density.
-
-
-\begin{figure*}[htbp]
-    \centering
-    \begin{tabular}{cc}
-        \includegraphics[width=0.45\textwidth]{figures/einstein_radius_vs_Sigma_10A.pdf} & 
-        \includegraphics[width=0.45\textwidth]{figures/gamma_shear_vs_Sigma_10A.pdf} \\
-        % (a) Einstein radius versus $\Sigma_{10A}$. & (b) Residual shear magnitude versus $\Sigma_{10A}$.
-    \end{tabular}
-    
-    \caption{\newedit{The distribution of the local galaxy density $\Sigma_{10}$ vs. the Einstein radius (left-hand panel) and vs. the residual shear magnitude (right-hand panel). The correlation is very weak for both the Einstein radius and the residual shear magnitude.}}
-    \label{fig:einstein_radius_gamma_shear_Sigma_10A}
-\end{figure*}
-
-
-\subsection{Correlation between the local galaxy density and lens model parameters}
-\label{sec:lens_model_params}
-
-\newedit{As illustrated in Fig. \ref{fig:einstein_radius_gamma_shear_Sigma_10A} (left-hand panel), we find the correlation between the Einstein radius and the local galaxy density is very weak ($r= 0.02 \pm 0.06$ for the baseline definition $\Sigma_{10}$). The correlation stays very weak between the residual shear magnitude, $\gamma_{\rm shear}$ and the local galaxy density giving $r= 0.01 \pm 0.02$ for the baseline definition $\Sigma_{10}$ (Fig. \ref{fig:einstein_radius_gamma_shear_Sigma_10A}, right panel). The logarithmic slope $\gamma$ is also weakly ($r= -0.29 \pm 0.06$) correlated with the local galaxy density (Fig. \ref{fig:gamma_Sigma_10A}), consistent with the finding of \citet{Treu09}.} \newedit{If a correlation were detected, it would support the hypothesis that the local slope of the mass tends to be steeper in a more crowded environment, possibly as the result of tidal truncation as indicated by some simulations \citep[e.g.,][]{Dobke07}. Therefore, our result either indicates that this hypothesis is incorrect, or at least the predicted effect is not present at kpc scales, or the environmental contribution to the projected mass density that we have not explicitly distinguished in our model is sufficient to negate the signature of the effect.}
-
-% \subsection{Residual shear magnitude vs. Position angle misalignment}
-
-\newedit{We see a moderate correlation ($r= 0.47 \pm 0.14$) between the residual shear magnitude and the PA misalignment (excluding systems with low misalignment, i.e., $\Delta \phi \lesssim 10 \degr $), which is illustrated in Fig. \ref{fig:gamma_shear_vs_pa_offset}. 
-This result is in agreement with several previous studies \citep[e.g.,][]{Gavazzi12, Bruderer16, Shajib19}}. Here, we did not apply the $q_{\rm L} > 0.9$ cut as applied in Section \ref{sec:pa_correlations}, since this additional cut on top of the  $\Delta\Phi \gtrsim 10\degr$ cut would not leave enough systems to obtain a robust correlation.
-
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.45\textwidth]{figures/gamma_vs_Sigma_10A.pdf}
-  \caption{\newedit{ The logarithmic slope $\gamma$ vs. the distribution of the local galaxy density $\Sigma_{10}$. We find only a weak correlation between the two, which is consistent with \citet{Treu09}.}}
-  \label{fig:gamma_Sigma_10A}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.45\textwidth]{figures/gamma_shear_vs_pa_offset.pdf}
-  \caption{\newedit{The residual shear magnitude \(\gamma_{\rm shear}\) vs. the distribution of the PA misalignment $\Delta \phi$. These two quantities are moderately correlated ($r=0.47\pm14)$. Here, we excluded systems with low PA misalignment, that is, those with $\Delta \phi \lesssim 10 \degr $.}}
-  \label{fig:gamma_shear_vs_pa_offset}
-\end{figure}
-
-
-%This result shows that the residual shear introduced in \citet{Shajib22} accounts for the external shear field of the samples with large position misalignment.
-
-\section{Discussion} 
-\label{sec:discussion}
+\section{Discussion and conclusion} \label{sec:discussion}
 
 % conclusion of the paper goes here
 
 % discussion
-% In this section, we discuss our results and their implications in the context of previous studies from the literature in Section \ref{sec:comparision_with_literature}. In addition, we also explicate the assumptions in this analysis and, thus, the inferred limitations of our study in Section \ref{sec:caveats}.
+We discuss our results and conclude by suggesting some arenas of possible future work.
 
-%%%%%%%%%%%%
-% \textcolor{red}{[AJS: I have modified the subsection headings to guide you in tidying up the discussion.]}
+\subsection{Assumptions and results in the context of previous studies}
+The main simplifying assumption we make is that the distribution of mass in gravitational lenses is a superposition of elliptical power law and `external shear' which roughly accounts for the effect of neighboring galaxies and cosmic shear. In the two cases of correlation analysis, instead of `external shear', we use the photometric densities considering a certain number of nearest sources. It allows us to estimate the correlations without resorting to the contentious measures of `external shear'.
 
-% \subsection{Comparison with previous studies} \label{sec:comparision_with_literature}
+Considering a mean z $\sim$ 0.5,  the centroid offset of light and mass distribution is within the range of 200 pc predicted by the EAGLE simulation (\cite{Schaller15}). Our sample contains an outlier (J0136-0008) with a centroid offset of $\sim$7.89 kpc. On visual inspection, it appears to be a merger of two galaxies. The analyses are most similar to those of \cite{Treu09} and use similar measures for quantifying source density. Though the correlations are weaker than in some previous studies, the general trend is very similar.
 
-% \textcolor{red}{[AJS: First, compare the result of this paper against Treu++09. Then, discuss the implication of the result in light of how the goal is set up in the introduction.]}
-
-% \textcolor{red}{[AJS: I moved this paragraph below from the introduction to here. Compare and discuss. Then, discuss the implication of the result in light of how the goal is set up in the introduction.]}
-
-A majority (9 out of 15 systems) of the PA misalignment values are $\lesssim 10^{\degr}$, which is consistent with several previous studies \citep{Keeton98b, Kochanek02, Treu09, Gavazzi12, Sluse12, Bruderer16, Shajib19, Shajib21}. \newedit{Our observation of the moderate correlation between the residual shear magnitude and the PA misalignment for cases with $\Delta \phi \gtrsim 10\degr$ also agrees with previous findings in the literature \citep[e.g.,][]{Bruderer16, Shajib19}. }
-
-For the regular definitions of the local galaxy density (i.e., $\Sigma_{\rm 10}$ and $\Sigma_{\rm 20}$), we find a strong correlation between them and the PA misalignment (Fig. \ref{fig:pos_off_Sigma}). This result agrees very well with \citet{Treu09}, who also found a strong correlation between the PA misalignment and $\Sigma_{10}$. However, for alternative definitions of $\Sigma$ that apply a flux selection on the galaxies or weigh the galaxies differently based on their flux and distance from the central deflector, this correlation becomes weak to very weak (Fig. \ref{fig:pos_off_Sigma}). This either calls into question the dependency of this strong correlation on the particular definition of local galaxy density \newedit{or the applicability of the alternative definitions of $\Sigma$ to be considered a reliable metric of the local galaxy density despite their intended design.} 
-
-However, the weakened support for the environmental origin of the PA misalignment, and our finding of no correlation between the residual shear magnitude and the local galaxy density, paints a coherent picture with the argument presented by \citet{Etherington23}. These authors argued that the residual shear magnitude is not solely due to external structures as suggested by the commonly used terminology `external shear.' Rather, the necessity of including a residual shear field in the lens model, a widely common practice in the literature, stems from the inadequacy of a single, uniformly elliptical mass distribution to capture the angular complexities truly present in the central deflector galaxies. Since we find the larger values of the PA misalignment angle to be moderately correlated with the residual shear magnitude, such large PA misalignments can also originate from the model having to compensate for potentially unaccounted angular complexities in the deflector. In that case, local galaxy density is not expected to correlate with the PA misalignment since the latter observable does not have a physical origin. More sophisticated models that account for deflector angular complexity to a greater detail \citep[e.g.,][]{He24, Amvrosiadis24} will be necessary to robustly settle the connection between the `true' PA misalignment and the local environment.
-
-%our baseline method, which includes faint sources, might be less accurate than the method where we excluded the faint sources. We did not have the redshift data for faint sources, so we could exclude faint sources with high redshift (if any). All the other methods of calculating local galaxy density except baseline show a weak correlation with PA misalignment.
-
-
-We find the mean centroid offset in our sample of 15 lenses to be $0.42 \pm 0.01$ kpc.
-% The majority of the centroid offsets (Table \ref{table:photometric_params}) calculated from the corresponding photometric redshifts lie outside the limit of 200 pc predicted by the EAGLE simulation \citep{Schaller15}. The mean is $\sim$20$\sigma$ away from 200 PC. 
-\citet{Schaller15} found the centroid offset between the dark and luminous matter in galaxies from the EAGLE simulation to be well described by a Maxwellian distribution with $\sigma = 0.2$ kpc. Therefore, our mean is situated at the $\sim$\nth{75} percentile of that distribution and thus well within the 2$\sigma$ consistency or the \nth{95} percentile. However, a caveat in this comparison is that the simulation results were based on the offset between dark matter and luminous matter centroids. In contrast, our centroid offsets are between the total matter and luminous matter. To facilitate a more robust comparison between simulations and observations, either the same observable needs to be extracted from the simulated galaxies, or lens models where dark matter and luminous matter distributions are separately accounted for \citep[e.g.,][]{Suyu14, Shajib20, Shajib22b} would be necessary. Both of these explorations are out of the scope of this paper, and we leave them for future investigations.
-%Future investigations on the simulated galaxies will be necessary to produce the distribution of the equivalent observable from our study and facilitate a more robust comparison between simulation and observations. 
-Among previous studies, \citet{Shajib21} constrained a 68 percent upper limit of 218$\pm$19 pc from a sample of 23 galaxy--galaxy lenses, which is consistent with our result within 2$\sigma$. As we robustly find the centroid offset to be non-correlated with the local galaxy density, we provide support for using the centroid offset as a robust probe of dark matter theories \citep{Harvey14, Kahlhoefer14, Robertson17}.
-%As the centroid offsets are much larger than the 200 pc threshold and are weakly correlated with the environmental parameters ($\Sigma$s), our investigation forwards this sort of large offsets as a persistent characteristic of the SIDM theory.
-
-The considered sample contains an outlier system (J0136$+$0008) with a centroid offset of $6.1\pm0.4$ kpc. On visual inspection,
-it appears to be a merger of two galaxies. In similar previous studies, the only observed system with a significantly larger offset ($1.72\pm 0.42$ kpc) is a merging galaxy system \citep{Shu16}. Although there was an initial report of a similar offset for a cluster-member galaxy in Abell 3827 \citep{Williams11, Massey15}, the offset was ruled out with more data \citep{Massey18}. \citet{Shajib19} also identified an outlier in their sample of 13 lensing systems that similarly has two comparable-mass deflectors in close proximity.
-%\citet{Shajib19} found an RMS offset in a sample of 13 strong lenses to be 0\farcs04 (i.e., $\sim$200 pc at $z\sim 0.5$) excluding three outliers, one of which has two comparable-mass deflectors potentially residing in the same parent halo.
-
-% The root mean square (rms) of the external shear values ($\gamma_{\rm shear}$) for the systems is 0.086, which is higher than the value reported by \citet{Treu09} (0.035) but lower than that of \citet{Gavazzi12} (0.12 \pm 0.05). 
-
-% \subsection{Caveats of this study and possible future improvements} \label{sec:caveats}
-
-% We model the systems in our sample with simply parametrized light and mass models, which may not always be adequate to describe all the complex features potentially present in real galaxies. In particular, the logarithmic slope of mass profile ($\gamma$) encodes valuable information on the nature and distribution of dark matter. Correlation analyses are similar to those performed in \citep{Treu09}, or more complex analyses can be done on these values we find. Multiple previous studies such as \citet{Etherington23, VandeVyvere22, VandeVyvere22b} argue that the profiles used in lensing system modeling are not adequate in terms of complexity and thus the typical combination of EPL with an `external shear' does not rightly describe the mass distribution of the lensing systems. Especially, the `external shear' is not the physical shear that it appears to represent; rather, it is a fudge to accommodate for the required flexibility of the modeling components. In the modeling process, we have estimated the best-fit values of two independent measures of shear ($\gamma_\text{shear}$  \&  $\phi_\text{shear}$). These values together with photometric source densities can be valuable in the process of finding adequately flexible models of mass distribution.
-
-\section{Summary}
-\label{sec:summary}
-
-% \textcolor{red}{[AJS: first summarize what was done in this paper regarding lens modeling and the subsequent analysis. Then, provide a bullet-point list of the main results regarding their interpretations (avoid numbers unless it's a key number that a reader might look for if they are consulting the paper for their own use).]}
-
-In this paper, we modeled a collection of 15 galaxy--galaxy gravitational lensing systems. These lens models are the first to be presented in the literature for these systems. In the modeling process, we used the publicly available lens modeling software package \textsc{lenstronomy}. Our baseline model for the lens mass comprises an EPL profile for the central deflector galaxy and a residual shear field. We fine-tuned this baseline mass model as necessary for more complex systems in the sample, for example, explicitly including nearby satellites and companions and accounting for higher-order lensing perturbation with a flexion field. For several systems, it was necessary to adjust the masks used when fitting the imaging data to reach a highly optimal stage. Additionally, for some systems, it was also required to adopt extra source components when needed. 
-
-We measured the local galaxy density $\Sigma_{10}$ for all our systems and investigated its correlation with the centroid offset and PA misalignment between the mass and light. We also tested our results on these correlations against alternative definitions of the local galaxy density. Our main results are:
-
-\begin{itemize}
-    \item We find no impact of the local environment on the offset between the light and mass centroids, i.e., the correlation is robustly identified as weak to very weak between these two.
-
-    \item We find a strong correlation between the PA misalignment and the standard definitions of the local galaxy density (i.e., $\Sigma_{\rm 10}$ and $\Sigma_{\rm 20}$), which agrees very well with previous study \citep{Treu09}. However, this finding of strong correlation is not robust against changing the definitions of the local galaxy density.
-\end{itemize}
-
-This paper ventured into modeling group-scale systems, extending the methodology ubiquitously applied to galaxy-scale ones. Group-scale systems are naturally more complex to model due to the need to account for multiple nearby companions and satellites than the case of a galaxy-scale system with a single main deflector \citep[with one or two small satellites for $\lesssim$30\% cases, e.g.,][]{Shajib19}. These group-scale lenses provide a useful probe of the connection between galaxies' internal structure and the environment, as investigated in this paper. However, modeling such complex systems can require a high level of fine-tuning in the model setup, as we have encountered in this analysis, which is time-consuming for the investigators. Various large-area sky surveys such as \textit{Euclid}, the Vera Rubin Observatory Legacy Survey of Space and Time, and the \textit{Roman} Space Telescope are expected to find strong lensing systems, including group-scale ones, in unprecedentedly large numbers, increasing the catalog size of currently known lenses by two orders of magnitudes or more \citep{Oguri10, Collett15, Shajib24b}. Automated modeling pipelines, whether through tailored algorithms \citep[e.g.,][]{Shajib19, Shajib21, bib3:Schmidt23} or through a fully machine-learning-based approach \citep[e.g.,][]{Erickson24} will be highly advantageous to avoid a huge requirement of investigator time when modeling a large sample of group-scale lenses.
-
-% We observed no significant correlation with the environment. Only exception is the position-angle offset which shows a strong correlation with the baseline local galaxy density, $\Sigma_{10}$ and $\Sigma_{20}$, which was also observed in previous studies.
-
-% As our mean centroid offset is $1.12 \pm 0.72$ kpc, which is much higher than 200 pc, and we did not see much correlation between centroid offset and the environment, so the result is indicating towards the self-interacting dark matter(SIDM) model.
+\subsection{Possible future works}
+We model the system with a generic flexible model of light and mass which is composed of many more parameters than we were able to analyze in our study. In particular, the mass-density gradient ($\gamma$) encrypts valuable information on the distribution of dark matter. Correlation analyses similar to those performed in \cite{Treu09} or more complex analyses can be done on these values we found. Multiple previous studies such as \cite{Etherington23}, \cite{VandeVyvere22}, \cite{VandeVyvere22b} argue that the profiles used in lensing system modeling are not adequate in terms of complexity and thus the typical combination of EPL with an 'external shear' does not rightly describe the mass distribution of the lensing systems. Especially, the 'external shear' is not the physical shear that it appears to represent; rather, it is a fudge to accommodate for the required flexibility modeling components. In the modeling process, we have estimated the best-fit values of two independent measures of shear($\gamma_\text{shear}$  &  $\phi_\text{shear}$). These values together with photometric source densities can be valuable in the process of finding adequately flexible models of mass distribution.
 
 \begin{acknowledgements}
-    This paper is the product of an \href{https://www.astrobridge.org/}{Astro Bridge} research project titled \href{https://www.astrobridge.org/projects/bdlensing}{BD Lensing} (BD is short for Bangladesh). This project was offered as a bridge program to undergraduate, post-baccalaureate, and Master's students in Bangladesh aspiring to pursue a PhD in astrophysics or related fields. AJS mentored and coordinated the project. The student participants who provided substantial contributions to this paper were deemed co-authors. The first five authors (SMRA, MJH, AAI, SHR, and FRS) are considered joint first authors since they are equally top contributors to all aspects of this project and manuscript writing. The joint first authors can prioritize their own name when including this paper in their curriculum vitae. \\
-
-
-      AJS thanks Khan Muhammad Bin Asad for helping to recruit students for the BDLensing project. Support for this work was provided by NASA through the NASA Hubble Fellowship grant HST-HF2-51492 awarded to AJS by the Space Telescope Science Institute, which is operated by the Association of Universities for Research in Astronomy, Inc., for NASA, under contract NAS5-26555.\\
-
-      This article made use of \textsc{lenstronomy} \citep{bib3:Birrer18, bib3:Birrer21},  \textsc{emcee} \citep{Foreman-Mackey13}, \textsc{astropy} \citep{bib3:AstropyCollaboration13, bib3:AstropyCollaboration18, bib3:Astropy22}, \textsc{numpy} \citep{bib3:Oliphant15}, \textsc{scipy} \citep{bib3:Jones01}, \textsc{matplotlib} \citep{bib3:Hunter07}, and \textsc{jupyter} \citep{Kluyver16}.
+      Part of this work was supported by the German
+      \emph{Deut\-sche For\-schungs\-ge\-mein\-schaft, DFG\/} project
+      number Ts~17/2--1.
 \end{acknowledgements}
 
 % WARNING
@@ -894,9 +500,8 @@ This paper ventured into modeling group-scale systems, extending the methodology
 \bibliographystyle{aa} % style aa.bst
 \bibliography{ajshajib} % your references Yourfile.bib
 
-%\appendix
+\appendix
 
-% \section{[For extra figures]}
-
+\section{[For extra figures]}
 
 \end{document}
